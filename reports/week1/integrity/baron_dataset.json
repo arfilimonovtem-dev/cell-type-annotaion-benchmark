@@ -1,0 +1,393 @@
+{
+  "dataset": "baron",
+  "input": {
+    "relative_path": "interim/baron_human.h5ad",
+    "bytes": 113920064,
+    "sha256": "289c61f1fcc467404118d7a11a452cf6299af39f6c504d3272303b3c105f5159"
+  },
+  "n_cells": 8569,
+  "n_features": 20125,
+  "X": {
+    "copied_from_layer": "counts",
+    "unit": "umi_counts",
+    "shape_cells_by_features": [
+      8569,
+      20125
+    ],
+    "storage": "csr_matrix",
+    "value_type": "float32",
+    "stored_values": 16171764,
+    "fraction_stored": 0.09377592636754327,
+    "min_stored": 1.0,
+    "max_stored": 4318.0,
+    "all_integer": true
+  },
+  "layers": {
+    "counts": {
+      "unit": "umi_counts",
+      "shape_cells_by_features": [
+        8569,
+        20125
+      ],
+      "storage": "csr_matrix",
+      "value_type": "float32",
+      "stored_values": 16171764,
+      "fraction_stored": 0.09377592636754327,
+      "min_stored": 1.0,
+      "max_stored": 4318.0,
+      "all_integer": true
+    },
+    "logcounts": {
+      "unit": "log_normalized",
+      "shape_cells_by_features": [
+        8569,
+        20125
+      ],
+      "storage": "csr_matrix",
+      "value_type": "float32",
+      "stored_values": 16171764,
+      "fraction_stored": 0.09377592636754327,
+      "min_stored": 0.22513917088508606,
+      "max_stored": 11.809162139892578,
+      "all_integer": false
+    }
+  },
+  "cells_per_donor": {
+    "human1": 1937,
+    "human2": 1724,
+    "human3": 3605,
+    "human4": 1303
+  },
+  "feature_id_resolution": {
+    "ambiguous_name": 51,
+    "official_symbol": 18765,
+    "unique_synonym": 1258,
+    "unmatched": 51
+  },
+  "obs_columns": [
+    {
+      "name": "human",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 4
+    },
+    {
+      "name": "cell_type1",
+      "type": "category",
+      "missing": 0,
+      "distinct": 14
+    },
+    {
+      "name": "total_features",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 2398
+    },
+    {
+      "name": "log10_total_features",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 2398
+    },
+    {
+      "name": "total_counts",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 5570
+    },
+    {
+      "name": "log10_total_counts",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 5570
+    },
+    {
+      "name": "pct_counts_top_50_features",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8544
+    },
+    {
+      "name": "pct_counts_top_100_features",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8540
+    },
+    {
+      "name": "pct_counts_top_200_features",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8541
+    },
+    {
+      "name": "pct_counts_top_500_features",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8537
+    },
+    {
+      "name": "total_features_endogenous",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 2398
+    },
+    {
+      "name": "log10_total_features_endogenous",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 2398
+    },
+    {
+      "name": "total_counts_endogenous",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 5570
+    },
+    {
+      "name": "log10_total_counts_endogenous",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 5570
+    },
+    {
+      "name": "pct_counts_endogenous",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "pct_counts_top_50_features_endogenous",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8544
+    },
+    {
+      "name": "pct_counts_top_100_features_endogenous",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8540
+    },
+    {
+      "name": "pct_counts_top_200_features_endogenous",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8541
+    },
+    {
+      "name": "pct_counts_top_500_features_endogenous",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 8537
+    },
+    {
+      "name": "total_features_feature_control",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "log10_total_features_feature_control",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "total_counts_feature_control",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "log10_total_counts_feature_control",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "pct_counts_feature_control",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "total_features_ERCC",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "log10_total_features_ERCC",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "total_counts_ERCC",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "log10_total_counts_ERCC",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "pct_counts_ERCC",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "is_cell_control",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "dataset",
+      "type": "str",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "donor",
+      "type": "string",
+      "missing": 0,
+      "distinct": 4
+    },
+    {
+      "name": "label_original",
+      "type": "string",
+      "missing": 0,
+      "distinct": 14
+    }
+  ],
+  "var_columns": [
+    {
+      "name": "feature_symbol",
+      "type": "str",
+      "missing": 0,
+      "distinct": 20125
+    },
+    {
+      "name": "is_feature_control",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "is_feature_control_ERCC",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "mean_counts",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 4711
+    },
+    {
+      "name": "log10_mean_counts",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 4711
+    },
+    {
+      "name": "rank_counts",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 4711
+    },
+    {
+      "name": "n_cells_counts",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 3693
+    },
+    {
+      "name": "pct_dropout_counts",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 3693
+    },
+    {
+      "name": "total_counts",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 4711
+    },
+    {
+      "name": "log10_total_counts",
+      "type": "float64",
+      "missing": 0,
+      "distinct": 4711
+    },
+    {
+      "name": "feature_id_original",
+      "type": "str",
+      "missing": 0,
+      "distinct": 20125
+    },
+    {
+      "name": "symbol_original",
+      "type": "string",
+      "missing": 0,
+      "distinct": 20125
+    },
+    {
+      "name": "symbol",
+      "type": "string",
+      "missing": 0,
+      "distinct": 20125
+    },
+    {
+      "name": "symbol_repaired",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 2
+    },
+    {
+      "name": "ncbi_gene_id",
+      "type": "string",
+      "missing": 102,
+      "distinct": 19999
+    },
+    {
+      "name": "id_resolution",
+      "type": "string",
+      "missing": 0,
+      "distinct": 4
+    },
+    {
+      "name": "is_spike_in",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "is_mt",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "shares_gene_id",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 2
+    }
+  ],
+  "example_cell_ids": [
+    "human1_lib1.final_cell_0001",
+    "human1_lib1.final_cell_0002",
+    "human1_lib1.final_cell_0003"
+  ],
+  "example_feature_ids": [
+    "A1BG",
+    "A1CF",
+    "A2M"
+  ]
+}

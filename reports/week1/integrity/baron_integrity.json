@@ -1,0 +1,299 @@
+[
+  {
+    "group": "cell_ids",
+    "name": "duplicate_cell_ids",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "cell_ids",
+    "name": "blank_cell_ids",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "orientation",
+    "name": "cell_axis_holds_cell_ids",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 malformed",
+    "expected": "all match ^human\\d+_lib\\d+\\.final_cell_\\d+$",
+    "detail": ""
+  },
+  {
+    "group": "gene_ids",
+    "name": "duplicate_feature_ids",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "gene_ids",
+    "name": "ambiguous_gene_names",
+    "severity": "warning",
+    "passed": false,
+    "observed": "51",
+    "expected": "0",
+    "detail": "Name points to several NCBI genes, so it receives no Gene ID. AGPAT9, AIM1, C10orf2, C17orf112, C17orf49"
+  },
+  {
+    "group": "gene_ids",
+    "name": "unmatched_gene_names",
+    "severity": "warning",
+    "passed": false,
+    "observed": "51",
+    "expected": "0",
+    "detail": "Name is unknown to NCBI gene_info. BACH1.IT1, CRIPAK, DKFZp434J0226, DKFZp434P228, ERCC6.PGBD3"
+  },
+  {
+    "group": "gene_ids",
+    "name": "features_sharing_a_gene_id",
+    "severity": "warning",
+    "passed": false,
+    "observed": "43",
+    "expected": "0",
+    "detail": "Several features resolve to one Gene ID. AKAP2, ARHGAP42, C10orf113, C10orf12, C10orf131"
+  },
+  {
+    "group": "values",
+    "name": "nonfinite_in_X",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "values",
+    "name": "negative_in_X",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "values",
+    "name": "non_integer_in_X",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": "unit is declared as umi_counts"
+  },
+  {
+    "group": "values",
+    "name": "nonfinite_in_layer counts",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "values",
+    "name": "negative_in_layer counts",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "values",
+    "name": "non_integer_in_layer counts",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": "unit is declared as umi_counts"
+  },
+  {
+    "group": "values",
+    "name": "nonfinite_in_layer logcounts",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "values",
+    "name": "negative_in_layer logcounts",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "values",
+    "name": "cells_with_zero_total",
+    "severity": "warning",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "values",
+    "name": "cells_without_donor",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "orientation",
+    "name": "shape_is_cells_by_features",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "8569 x 20125",
+    "expected": "8569 x 20125",
+    "detail": ""
+  },
+  {
+    "group": "orientation",
+    "name": "feature_axis_holds_genes",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "6 of 6 marker genes on the feature axis",
+    "expected": "all 6",
+    "detail": ""
+  },
+  {
+    "group": "expression_metadata",
+    "name": "donor_column_matches_cell_id",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 disagreements",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "expression_metadata",
+    "name": "layer_counts_same_nonzero_cells_as_X",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 positions differ",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "expression_metadata",
+    "name": "layer_logcounts_same_nonzero_cells_as_X",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 positions differ",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "expression_metadata",
+    "name": "recorded_cells_total_counts_matches_matrix",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 mismatches",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "expression_metadata",
+    "name": "recorded_cells_total_features_matches_matrix",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 mismatches",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "expression_metadata",
+    "name": "recorded_features_total_counts_matches_matrix",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 mismatches",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "expression_metadata",
+    "name": "recorded_features_n_cells_counts_matches_matrix",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 mismatches",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "annotation",
+    "name": "annotation_ids_are_unique",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "annotation",
+    "name": "annotation_ids_match_cell_ids",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 cells without annotation, 0 annotations without a cell",
+    "expected": "0 and 0",
+    "detail": ""
+  },
+  {
+    "group": "annotation",
+    "name": "annotation_donor_matches_cell",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "annotation",
+    "name": "annotation_label_matches_cell",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "annotation",
+    "name": "cells_without_author_label",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "annotation",
+    "name": "label_map_lists_every_label",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "0 unlisted",
+    "expected": "0",
+    "detail": ""
+  },
+  {
+    "group": "annotation",
+    "name": "marker_genes_peak_in_expected_class",
+    "severity": "fatal",
+    "passed": true,
+    "observed": "6 of 6 correct",
+    "expected": "6 of 6",
+    "detail": "INS=beta; GCG=alpha; SST=delta; PPY=gamma; PRSS1=acinar; KRT19=ductal"
+  }
+]

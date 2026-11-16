@@ -1,0 +1,146 @@
+feature_id_original	symbol_original	symbol	symbol_repaired	ncbi_gene_id	id_resolution	shares_gene_id
+AGPAT9	AGPAT9	AGPAT9	False		ambiguous_name	False
+AIM1	AIM1	AIM1	False		ambiguous_name	False
+C10orf2	C10orf2	C10orf2	False		ambiguous_name	False
+C17orf112	C17orf112	C17orf112	False		ambiguous_name	False
+C17orf49	C17orf49	C17orf49	False		ambiguous_name	False
+C18orf21	C18orf21	C18orf21	False		ambiguous_name	False
+C20orf197	C20orf197	C20orf197	False		ambiguous_name	False
+C2orf27B	C2orf27B	C2orf27B	False		ambiguous_name	False
+C2orf47	C2orf47	C2orf47	False		ambiguous_name	False
+CBWD3	CBWD3	CBWD3	False		ambiguous_name	False
+CGB	CGB	CGB	False		ambiguous_name	False
+CIR1	CIR1	CIR1	False		ambiguous_name	False
+CSRP2BP	CSRP2BP	CSRP2BP	False		ambiguous_name	False
+DEC1	DEC1	DEC1	False		ambiguous_name	False
+DUSP13	DUSP13	DUSP13	False		ambiguous_name	False
+DUSP27	DUSP27	DUSP27	False		ambiguous_name	False
+EFCAB1	EFCAB1	EFCAB1	False		ambiguous_name	False
+EFTUD1	EFTUD1	EFTUD1	False		ambiguous_name	False
+FAM21A	FAM21A	FAM21A	False		ambiguous_name	False
+GARS	GARS	GARS	False		ambiguous_name	False
+GGTA1P	GGTA1P	GGTA1P	False		ambiguous_name	False
+GIF	GIF	GIF	False		ambiguous_name	False
+HBD	HBD	HBD	False		ambiguous_name	False
+HIST1H2BC	HIST1H2BC	HIST1H2BC	False		ambiguous_name	False
+HIST1H2BE	HIST1H2BE	HIST1H2BE	False		ambiguous_name	False
+HIST1H2BF	HIST1H2BF	HIST1H2BF	False		ambiguous_name	False
+HIST1H2BG	HIST1H2BG	HIST1H2BG	False		ambiguous_name	False
+HIST1H2BI	HIST1H2BI	HIST1H2BI	False		ambiguous_name	False
+HN1	HN1	HN1	False		ambiguous_name	False
+HN1L	HN1L	HN1L	False		ambiguous_name	False
+LCA10	LCA10	LCA10	False		ambiguous_name	False
+LOR	LOR	LOR	False		ambiguous_name	False
+MARS	MARS	MARS	False		ambiguous_name	False
+MMD2	MMD2	MMD2	False		ambiguous_name	False
+MPP6	MPP6	MPP6	False		ambiguous_name	False
+MUM1	MUM1	MUM1	False		ambiguous_name	False
+NAT6	NAT6	NAT6	False		ambiguous_name	False
+NDUFA4	NDUFA4	NDUFA4	False		ambiguous_name	False
+NOV	NOV	NOV	False		ambiguous_name	False
+QARS	QARS	QARS	False		ambiguous_name	False
+SARS	SARS	SARS	False		ambiguous_name	False
+SEPT2	SEPT2	SEPT2	False		ambiguous_name	False
+SHFM1	SHFM1	SHFM1	False		ambiguous_name	False
+SLC35E2	SLC35E2	SLC35E2	False		ambiguous_name	False
+STRA13	STRA13	STRA13	False		ambiguous_name	False
+TAZ	TAZ	TAZ	False		ambiguous_name	False
+TCEB3C	TCEB3C	TCEB3C	False		ambiguous_name	False
+TCEB3CL	TCEB3CL	TCEB3CL	False		ambiguous_name	False
+TDGF1	TDGF1	TDGF1	False		ambiguous_name	False
+TEC	TEC	TEC	False		ambiguous_name	False
+TTC30B	TTC30B	TTC30B	False		ambiguous_name	False
+ARHGAP42	ARHGAP42	ARHGAP42	False	143872	official_symbol	True
+CC2D2B	CC2D2B	CC2D2B	False	387707	official_symbol	True
+DDI2	DDI2	DDI2	False	84301	official_symbol	True
+LCOR	LCOR	LCOR	False	84458	official_symbol	True
+MIA2	MIA2	MIA2	False	4253	official_symbol	True
+MYO18A	MYO18A	MYO18A	False	399687	official_symbol	True
+NEBL	NEBL	NEBL	False	10529	official_symbol	True
+PLEKHG7	PLEKHG7	PLEKHG7	False	440107	official_symbol	True
+PRICKLE4	PRICKLE4	PRICKLE4	False	29964	official_symbol	True
+RRM2	RRM2	RRM2	False	6241	official_symbol	True
+S1PR3	S1PR3	S1PR3	False	1903	official_symbol	True
+SLITRK2	SLITRK2	SLITRK2	False	84631	official_symbol	True
+TRBV25.1	TRBV25.1	TRBV25-1	True	28562	official_symbol	True
+TTLL11	TTLL11	TTLL11	False	158135	official_symbol	True
+TXNRD3	TXNRD3	TXNRD3	False	114112	official_symbol	True
+ZFHX3	ZFHX3	ZFHX3	False	463	official_symbol	True
+AKAP2	AKAP2	AKAP2	False	445815	unique_synonym	True
+C10orf113	C10orf113	C10orf113	False	10529	unique_synonym	True
+C10orf12	C10orf12	C10orf12	False	84458	unique_synonym	True
+C10orf131	C10orf131	C10orf131	False	387707	unique_synonym	True
+C12orf74	C12orf74	C12orf74	False	440107	unique_synonym	True
+C16orf47	C16orf47	C16orf47	False	463	unique_synonym	True
+C17orf47	C17orf47	C17orf47	False	5414	unique_synonym	True
+C2orf48	C2orf48	C2orf48	False	6241	unique_synonym	True
+C6orf49	C6orf49	C6orf49	False	29964	unique_synonym	True
+C9orf47	C9orf47	C9orf47	False	1903	unique_synonym	True
+CTAGE5	CTAGE5	CTAGE5	False	4253	unique_synonym	True
+FKSG52	FKSG52	FKSG52	False	400949	unique_synonym	True
+FKSG56	FKSG56	FKSG56	False	400949	unique_synonym	True
+FKSG61	FKSG61	FKSG61	False	400949	unique_synonym	True
+FKSG66	FKSG66	FKSG66	False	400949	unique_synonym	True
+FKSG68	FKSG68	FKSG68	False	400949	unique_synonym	True
+FKSG70	FKSG70	FKSG70	False	400949	unique_synonym	True
+PALM2	PALM2	PALM2	False	445815	unique_synonym	True
+PALM2.AKAP2	PALM2.AKAP2	PALM2-AKAP2	True	445815	unique_synonym	True
+RSC1A1	RSC1A1	RSC1A1	False	84301	unique_synonym	True
+SEPT4	SEPT4	SEPT4	False	5414	unique_synonym	True
+TCRBV11S1A1T	TCRBV11S1A1T	TCRBV11S1A1T	False	28562	unique_synonym	True
+TIAF1	TIAF1	TIAF1	False	399687	unique_synonym	True
+TMEM133	TMEM133	TMEM133	False	143872	unique_synonym	True
+TMEM257	TMEM257	TMEM257	False	84631	unique_synonym	True
+TTLL11.IT1	TTLL11.IT1	TTLL11-IT1	True	158135	unique_synonym	True
+TXNRD3NB	TXNRD3NB	TXNRD3NB	False	114112	unique_synonym	True
+BACH1.IT1	BACH1.IT1	BACH1.IT1	False		unmatched	False
+CRIPAK	CRIPAK	CRIPAK	False		unmatched	False
+DKFZp434J0226	DKFZp434J0226	DKFZp434J0226	False		unmatched	False
+DKFZp434P228	DKFZp434P228	DKFZp434P228	False		unmatched	False
+ERCC6.PGBD3	ERCC6.PGBD3	ERCC6.PGBD3	False		unmatched	False
+FAM231A	FAM231A	FAM231A	False		unmatched	False
+FAM231C	FAM231C	FAM231C	False		unmatched	False
+FAM231D	FAM231D	FAM231D	False		unmatched	False
+FKSG51	FKSG51	FKSG51	False		unmatched	False
+FKSG54	FKSG54	FKSG54	False		unmatched	False
+FKSG59	FKSG59	FKSG59	False		unmatched	False
+FKSG62	FKSG62	FKSG62	False		unmatched	False
+FKSG63	FKSG63	FKSG63	False		unmatched	False
+FLJ12825	FLJ12825	FLJ12825	False		unmatched	False
+FLJ20019	FLJ20019	FLJ20019	False		unmatched	False
+FLJ20021	FLJ20021	FLJ20021	False		unmatched	False
+FLJ21408	FLJ21408	FLJ21408	False		unmatched	False
+FLJ22447	FLJ22447	FLJ22447	False		unmatched	False
+FLJ22763	FLJ22763	FLJ22763	False		unmatched	False
+FLJ26245	FLJ26245	FLJ26245	False		unmatched	False
+FLJ26850	FLJ26850	FLJ26850	False		unmatched	False
+FLJ27354	FLJ27354	FLJ27354	False		unmatched	False
+FLJ31104	FLJ31104	FLJ31104	False		unmatched	False
+FLJ31356	FLJ31356	FLJ31356	False		unmatched	False
+FLJ31662	FLJ31662	FLJ31662	False		unmatched	False
+FLJ33360	FLJ33360	FLJ33360	False		unmatched	False
+FLJ33581	FLJ33581	FLJ33581	False		unmatched	False
+FLJ35934	FLJ35934	FLJ35934	False		unmatched	False
+FLJ37035	FLJ37035	FLJ37035	False		unmatched	False
+FLJ37453	FLJ37453	FLJ37453	False		unmatched	False
+FLJ37505	FLJ37505	FLJ37505	False		unmatched	False
+FLJ38122	FLJ38122	FLJ38122	False		unmatched	False
+FLJ41941	FLJ41941	FLJ41941	False		unmatched	False
+FLJ42102	FLJ42102	FLJ42102	False		unmatched	False
+FLJ42969	FLJ42969	FLJ42969	False		unmatched	False
+FLJ43879	FLJ43879	FLJ43879	False		unmatched	False
+FLJ45079	FLJ45079	FLJ45079	False		unmatched	False
+FLJ46066	FLJ46066	FLJ46066	False		unmatched	False
+GAFA3	GAFA3	GAFA3	False		unmatched	False
+GVQW1	GVQW1	GVQW1	False		unmatched	False
+HZGJ	HZGJ	HZGJ	False		unmatched	False
+MGC15885	MGC15885	MGC15885	False		unmatched	False
+MGC32805	MGC32805	MGC32805	False		unmatched	False
+MGC39584	MGC39584	MGC39584	False		unmatched	False
+MGC45922	MGC45922	MGC45922	False		unmatched	False
+OCLM	OCLM	OCLM	False		unmatched	False
+PP14571	PP14571	PP14571	False		unmatched	False
+SPHAR	SPHAR	SPHAR	False		unmatched	False
+THRA1.BTR	THRA1.BTR	THRA1.BTR	False		unmatched	False
+UNQ6494	UNQ6494	UNQ6494	False		unmatched	False
+ZNF638.IT1	ZNF638.IT1	ZNF638.IT1	False		unmatched	False

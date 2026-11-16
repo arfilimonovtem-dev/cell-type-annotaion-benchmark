@@ -1,0 +1,92 @@
+# Dataset registry for the Baron-Muraro pilot.
+#
+# Every path is relative to the data root, so no teammate's folder layout is
+# written here. The data root comes from --data-root, then the environment
+# variable ANNOTBENCH_DATA_ROOT, then <repo>/data.
+
+gene_info: raw/ncbi_gene_info/Homo_sapiens.gene_info.gz
+
+# Used only to test that labels line up with expression. Never used to assign labels.
+marker_checks:
+  INS: beta
+  GCG: alpha
+  SST: delta
+  PPY: gamma
+  PRSS1: acinar
+  KRT19: ductal
+
+datasets:
+  baron:
+    family: pancreas
+    h5ad: interim/baron_human.h5ad
+    expression:
+      use_layer: counts        # raw UMI counts as deposited
+    layer_units:
+      counts: umi_counts
+      logcounts: log_normalized
+    expected_shape: {n_cells: 8569, n_features: 20125}
+    expected_missing_labels: 0
+    columns:
+      donor: human
+      donor_prefix: human      # the source column stores 1..4; cell IDs say human1..human4
+      label: cell_type1
+    ids:
+      cell_id_regex: '^human\d+_lib\d+\.final_cell_\d+$'
+      donor_from_cell_id: '^(human\d+)_'
+    features:
+      symbol_column: null      # feature names are the symbols
+      r_mangled_names: true    # the .rds passed through R, which turns '-' into '.'
+      spike_in_column: null
+    metadata_totals:           # values the authors' QC recorded, compared with the matrix
+      - {axis: cells, column: total_counts, kind: sum, layer: counts}
+      - {axis: cells, column: total_features, kind: detected, layer: counts}
+      - {axis: features, column: total_counts, kind: sum, layer: counts}
+      - {axis: features, column: n_cells_counts, kind: detected, layer: counts}
+    annotation_source:
+      path: interim/baron_human/obs.csv
+      id_column: cell_id
+      label_column: cell_type1
+      donor_column: human
+    build_inputs:
+      rds: raw/baron_GSE84133/baron-human.rds
+
+  muraro:
+    family: pancreas
+    h5ad: interim/muraro_human.h5ad
+    expression:
+      use_layer: umi           # observed UMIs, the unit that matches Baron
+    layer_units:
+      transcripts: corrected_transcripts   # as deposited on GEO
+      umi: umi_counts                      # derived by inverting the saturation correction
+    expected_shape: {n_cells: 3072, n_features: 19140}
+    expected_missing_labels: 946
+    columns:
+      donor: donor
+      label: cell_type1
+      missing_label_means: author_qc_fail
+    ids:
+      cell_id_regex: '^D\d+-\d+_\d+$'
+      donor_from_cell_id: '^(D\d+)-'
+    features:
+      symbol_column: symbol
+      r_mangled_names: false
+      spike_in_column: is_ercc
+    source_matrix:             # the deposited GEO table, compared with the matrix
+      path: raw/muraro_GSE85241/GSE85241_cellsystems_dataset_4donors_updated.csv.gz
+      sep: "\t"
+      layer: transcripts
+    umi_back_transform:
+      from_layer: transcripts
+      to_layer: umi
+      k: 256                   # 4 bp UMI gives 4^4 distinct sequences
+      min_integer_fraction: 0.999
+    annotation_source:
+      path: raw/muraro_scRNAseq_EH2693/coldata.csv
+      id_column: cell_id
+      label_column: label
+      donor_column: donor
+    build_inputs:
+      matrix: raw/muraro_GSE85241/GSE85241_cellsystems_dataset_4donors_updated.csv.gz
+      barcodes: raw/muraro_GSE85241/GSE85241_cel-seq_barcodes.csv.gz
+      soft: raw/muraro_GSE85241/GSE85241_family.soft.gz
+      labels: raw/muraro_scRNAseq_EH2693/coldata.csv
