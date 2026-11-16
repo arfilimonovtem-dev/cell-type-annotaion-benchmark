@@ -1,0 +1,202 @@
+{
+  "dataset": "muraro",
+  "input": {
+    "relative_path": "interim/muraro_human.h5ad",
+    "bytes": 82889613,
+    "sha256": "52be31051ebbf72543205cf51b6863456f49537e27b80bb3cf875bb4587f348a"
+  },
+  "n_cells": 3072,
+  "n_features": 19140,
+  "X": {
+    "copied_from_layer": "umi",
+    "unit": "umi_counts",
+    "shape_cells_by_features": [
+      3072,
+      19140
+    ],
+    "storage": "csr_matrix",
+    "value_type": "float32",
+    "stored_values": 12442034,
+    "fraction_stored": 0.21160612727490422,
+    "min_stored": 1.0,
+    "max_stored": 256.0,
+    "all_integer": true
+  },
+  "layers": {
+    "transcripts": {
+      "unit": "corrected_transcripts",
+      "shape_cells_by_features": [
+        3072,
+        19140
+      ],
+      "storage": "csr_matrix",
+      "value_type": "float32",
+      "stored_values": 12442034,
+      "fraction_stored": 0.21160612727490422,
+      "min_stored": 1.0019582509994507,
+      "max_stored": 1597.0111083984375,
+      "all_integer": false
+    },
+    "umi": {
+      "unit": "umi_counts",
+      "shape_cells_by_features": [
+        3072,
+        19140
+      ],
+      "storage": "csr_matrix",
+      "value_type": "float32",
+      "stored_values": 12442034,
+      "fraction_stored": 0.21160612727490422,
+      "min_stored": 1.0,
+      "max_stored": 256.0,
+      "all_integer": true
+    }
+  },
+  "cells_per_donor": {
+    "D28": 768,
+    "D29": 768,
+    "D30": 768,
+    "D31": 768
+  },
+  "feature_id_resolution": {
+    "ambiguous_name": 59,
+    "official_symbol": 16672,
+    "spike_in": 81,
+    "unique_synonym": 1606,
+    "unmatched": 722
+  },
+  "obs_columns": [
+    {
+      "name": "library",
+      "type": "category",
+      "missing": 0,
+      "distinct": 32
+    },
+    {
+      "name": "donor",
+      "type": "string",
+      "missing": 0,
+      "distinct": 4
+    },
+    {
+      "name": "well",
+      "type": "int64",
+      "missing": 0,
+      "distinct": 96
+    },
+    {
+      "name": "gsm",
+      "type": "category",
+      "missing": 0,
+      "distinct": 32
+    },
+    {
+      "name": "barcode",
+      "type": "category",
+      "missing": 0,
+      "distinct": 96
+    },
+    {
+      "name": "cell_type1",
+      "type": "category",
+      "missing": 946,
+      "distinct": 10
+    },
+    {
+      "name": "author_qc_pass",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 2
+    },
+    {
+      "name": "dataset",
+      "type": "str",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "label_original",
+      "type": "string",
+      "missing": 946,
+      "distinct": 10
+    }
+  ],
+  "var_columns": [
+    {
+      "name": "symbol",
+      "type": "string",
+      "missing": 0,
+      "distinct": 19127
+    },
+    {
+      "name": "chromosome",
+      "type": "category",
+      "missing": 0,
+      "distinct": 25
+    },
+    {
+      "name": "is_ercc",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 2
+    },
+    {
+      "name": "feature_id_original",
+      "type": "str",
+      "missing": 0,
+      "distinct": 19140
+    },
+    {
+      "name": "symbol_original",
+      "type": "string",
+      "missing": 0,
+      "distinct": 19127
+    },
+    {
+      "name": "symbol_repaired",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "ncbi_gene_id",
+      "type": "string",
+      "missing": 862,
+      "distinct": 18228
+    },
+    {
+      "name": "id_resolution",
+      "type": "string",
+      "missing": 0,
+      "distinct": 5
+    },
+    {
+      "name": "is_spike_in",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 2
+    },
+    {
+      "name": "is_mt",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 1
+    },
+    {
+      "name": "shares_gene_id",
+      "type": "bool",
+      "missing": 0,
+      "distinct": 2
+    }
+  ],
+  "example_cell_ids": [
+    "D28-1_1",
+    "D28-1_2",
+    "D28-1_3"
+  ],
+  "example_feature_ids": [
+    "A1BG-AS1__chr19",
+    "A1BG__chr19",
+    "A1CF__chr10"
+  ]
+}

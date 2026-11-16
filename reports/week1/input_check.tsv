@@ -1,0 +1,7 @@
+dataset	relative_path	bytes	status	source
+baron	raw/baron_GSE84133/baron-human.rds	66460447	ok	Hemberg-lab scRNA-seq collection .rds of GSE84133; original download URL was not recorded
+muraro	raw/muraro_GSE85241/GSE85241_cellsystems_dataset_4donors_updated.csv.gz	17005498	ok	GEO GSE85241 supplementary file
+muraro	raw/muraro_GSE85241/GSE85241_cel-seq_barcodes.csv.gz	424	ok	GEO GSE85241 supplementary file
+muraro	raw/muraro_GSE85241/GSE85241_family.soft.gz	4281	ok	GEO GSE85241 family SOFT file
+muraro	raw/muraro_scRNAseq_EH2693/coldata.csv	83947	ok	Bioconductor ExperimentHub EH2693, exported to CSV; see README.txt in the same folder
+shared	raw/ncbi_gene_info/Homo_sapiens.gene_info.gz	5199199	ok	NCBI gene_info for Homo sapiens, downloaded 2026-10-24; NCBI updates this file, so the checksum pins this copy
