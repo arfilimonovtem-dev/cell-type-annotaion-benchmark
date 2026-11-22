@@ -1,4 +1,4 @@
-"""Command line for the Week 1 pipeline. Run `python -m annotbench --help` from the repo root."""
+"""Command line for the benchmark pipeline. Run `python -m annotbench --help` from the repo root."""
 from __future__ import annotations
 
 import argparse
@@ -12,7 +12,10 @@ from .environment import check_inputs, check_python, check_r
 from .integrity import IntegrityError, raise_if_failed, run_integrity_checks
 from .labels import LabelMapError, load_label_map
 from .loading import DatasetLoadError, describe_dataset, load_dataset, load_gene_reference_from_registry
+from .preprocess import PreprocessError
 from .reporting import write_dataset_report, write_integrity_report
+from .splits import SplitError
+from .universe import UniverseError
 
 PILOT_DATASETS = ["baron", "muraro"]
 
@@ -83,6 +86,20 @@ def command_week1(args) -> int:
     return 0
 
 
+def command_run(args) -> int:
+    """Week 2: QC, universe, splits, then every scenario x seed x method (or stop after splits)."""
+    from .runner import load_pilot_config, run_pilot
+
+    cfg = load_pilot_config(args.config)
+    index = run_pilot(cfg, out_root=args.out_root, data_root=args.data_root, exp_filter=args.exp,
+                      method_filter=args.method, prepare_only=args.command == "prepare")
+    if args.command == "prepare":
+        return 0
+    failed = index[index["status"] != "success"]
+    print(f"\n{len(index)} runs, {len(index) - len(failed)} succeeded, {len(failed)} recorded as failures.")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="annotbench", description=__doc__)
     parser.add_argument("--data-root", default=None, help=f"data folder (default: ${config.DATA_ROOT_ENV}, then <repo>/data)")
@@ -97,6 +114,14 @@ def build_parser() -> argparse.ArgumentParser:
     integrity.add_argument("--dataset", action="append", choices=PILOT_DATASETS, help="repeat to name several (default: all)")
     integrity.set_defaults(run=command_integrity)
     commands.add_parser("week1", help="run every Week 1 step in order").set_defaults(run=command_week1)
+    for name, text in (("run", "run the pilot: QC, universe, splits and every scenario x seed x method"),
+                       ("prepare", "QC, gene universe and split files only (no methods)")):
+        sub = commands.add_parser(name, help=text)
+        sub.add_argument("--config", default="configs/pilot.yaml", help="pilot configuration file")
+        sub.add_argument("--out-root", default=None, help="where splits/, gene_universes/, results/ and reports/week2/ go (default: repo root)")
+        sub.add_argument("--exp", action="append", choices=["e1", "e2", "e3"], help="only these experiments (repeatable)")
+        sub.add_argument("--method", action="append", help="only these methods (repeatable)")
+        sub.set_defaults(run=command_run)
     return parser
 
 
@@ -104,7 +129,8 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
         return args.run(args)
-    except (IntegrityError, config.MissingInputError, DatasetLoadError, LabelMapError) as error:
+    except (IntegrityError, config.MissingInputError, DatasetLoadError, LabelMapError, SplitError, UniverseError,
+            PreprocessError) as error:
         print(f"\n{error}", file=sys.stderr)
         return 2
 

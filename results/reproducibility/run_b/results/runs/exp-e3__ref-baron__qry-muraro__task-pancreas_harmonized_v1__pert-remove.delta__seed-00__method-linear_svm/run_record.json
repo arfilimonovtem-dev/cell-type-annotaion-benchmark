@@ -1,0 +1,104 @@
+{
+  "run_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-00__method-linear_svm",
+  "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-00",
+  "method": "linear_svm",
+  "exp": "e3",
+  "reference": "baron",
+  "query": "muraro",
+  "perturbation": "remove.delta",
+  "seed": 0,
+  "status": "success",
+  "stages": {
+    "preprocessing": {
+      "wall_seconds": 4.1146,
+      "peak_memory_mb": 468.2
+    },
+    "fit": {
+      "wall_seconds": 51.6685,
+      "peak_memory_mb": 657.0
+    },
+    "annotate": {
+      "wall_seconds": 0.0279,
+      "peak_memory_mb": 106.5
+    }
+  },
+  "error_type": null,
+  "error_message": null,
+  "input_unit": {
+    "baron": "umi_counts",
+    "muraro": "umi_counts"
+  },
+  "representation": "scaled_hvg",
+  "method_settings": {
+    "model": "PLACEHOLDER sklearn LinearSVC (replace with the leader's SVM)",
+    "C": 1.0,
+    "class_weight": null,
+    "representation": "scaled_hvg",
+    "probability_calibration": "platt_inner_folds",
+    "max_iter": 5000,
+    "dual": true,
+    "notes": []
+  },
+  "preprocess_settings": {
+    "recipe": "lognorm_v1",
+    "target_sum": 10000,
+    "library_size": "universe",
+    "n_hvg": 2000,
+    "hvg_flavor": "seurat",
+    "hvg_batch_key": null,
+    "zero_sd_rule": "unit",
+    "clip_max": 10,
+    "n_pcs": 50,
+    "pca_solver": "full"
+  },
+  "target_sums": {
+    "baron": 10000.0,
+    "muraro": 10000.0
+  },
+  "query_adaptive_steps": [],
+  "inner_cv_refit_preprocessing": true,
+  "n_cells": {
+    "train": 2697,
+    "calibration": 1723,
+    "query": 2041
+  },
+  "hashes": {
+    "train_ids_sha256": "c7b99ca6fcf06ac5626de612324d1277a7ead95859a2a790ea1dd2bffdbc58bc",
+    "calibration_ids_sha256": "4d217678cdbc24eed1deaa2cc883107d641ff3794d57b97489f6082ad4c9837d",
+    "query_ids_sha256": "9514280a383d0b9251dff25c8ebdec603383f3ba5cbfa6058910f5d546274d91",
+    "universe_sha256": "2bdc3c8918ffb7b776a521945b51fac5feb5fb69376a107a57a0e2dc21f5f2fc",
+    "universe_file_sha256": "adbea6f84cbdf163528f228629623eed9255b4e674c6b88b58ba3ad41b2e8384",
+    "split_file_sha256": "b59bf69b35d64068ff18b633b64c64e2c987c18bd64621d4956ba58de61f5171",
+    "config_sha256": "052ea87404298051f14ed20ba71e375de68ec34ef0fbfc1364eb5b6b0a543759",
+    "hvg_sha256": "70523e95745bfee3c97480eb617e369e5d5d8cd882d1b52b51b4b08ef259b814"
+  },
+  "vocabulary": [
+    "acinar",
+    "alpha",
+    "beta",
+    "ductal",
+    "endothelial",
+    "epsilon",
+    "gamma",
+    "macrophage",
+    "mast",
+    "schwann",
+    "stellate",
+    "t_cell"
+  ],
+  "warnings": [],
+  "git_commit": "f70a84e",
+  "git_dirty": true,
+  "environment": null,
+  "package_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.16.0",
+    "pandas": "3.0.6",
+    "anndata": "0.13.4",
+    "scikit-learn": "1.7.1",
+    "scanpy": "1.12.4"
+  },
+  "host": "professor-Latitude-7320",
+  "started_utc": "2026-11-20T17:15:29Z",
+  "finished_utc": "2026-11-20T17:16:26Z"
+}

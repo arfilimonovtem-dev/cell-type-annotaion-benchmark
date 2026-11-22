@@ -1,0 +1,40 @@
+{
+  "config": "/home/professor/cell-type-annotaion-benchmark/configs/pilot.yaml",
+  "config_sha256": "387e560e248f40b84f6db5b172ed265a659554c14035f84fe48158835bf2cdfb",
+  "universe_sha256": "2bdc3c8918ffb7b776a521945b51fac5feb5fb69376a107a57a0e2dc21f5f2fc",
+  "target_sums": {
+    "baron": 10000.0,
+    "muraro": 10000.0
+  },
+  "splits": [
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-00",
+      "sha256": "f28a4ad51b5cdd0061a49241fe791e7b2db2c28268250603c02e28e8d94537fd"
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-01",
+      "sha256": "04f4d6a07bc1fd322cce9b441d71f541cecd9e92556c73e388fe8517d5012deb"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-00",
+      "sha256": "7afd943c696ad1a0fc5d3fd615381c51e7ff32e3c3c548e23a7fa74545c7090e"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-01",
+      "sha256": "9ac9cd3b3adf05d51070cce22f4a2dc17734d6ff2654c4aac301fd2563838b0e"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-00",
+      "sha256": "b59bf69b35d64068ff18b633b64c64e2c987c18bd64621d4956ba58de61f5171"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-01",
+      "sha256": "d8befb95217d0b0211c535a1e7659541c55d6d73defec35df6c9aa8abab3734c"
+    }
+  ],
+  "git_commit": "f70a84e",
+  "git_dirty": true,
+  "started_utc": "2026-11-20T17:17:56Z",
+  "finished_utc": "2026-11-20T17:24:49Z",
+  "prepare_only": false
+}
