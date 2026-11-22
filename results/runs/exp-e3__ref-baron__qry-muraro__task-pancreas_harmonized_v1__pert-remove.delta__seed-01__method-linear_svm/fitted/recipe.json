@@ -1,0 +1,22 @@
+{
+  "config": {
+    "recipe": "lognorm_v1",
+    "target_sum": 10000,
+    "library_size": "universe",
+    "n_hvg": 2000,
+    "hvg_flavor": "seurat",
+    "hvg_batch_key": null,
+    "zero_sd_rule": "unit",
+    "clip_max": 10,
+    "n_pcs": 50,
+    "pca_solver": "full"
+  },
+  "seed": 1,
+  "target_sums": {
+    "baron": 10000.0,
+    "muraro": 10000.0
+  },
+  "reference_dataset": "baron",
+  "universe_sha256": "2bdc3c8918ffb7b776a521945b51fac5feb5fb69376a107a57a0e2dc21f5f2fc",
+  "n_universe_genes": 16847
+}

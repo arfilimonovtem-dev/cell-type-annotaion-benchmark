@@ -1,0 +1,102 @@
+# Week 2 pilot configuration: Baron -> Muraro with PCA-kNN and linear SVM. DRAFT.
+#
+# Run:      python -m annotbench run --config configs/pilot.yaml
+# Splits:   python -m annotbench prepare --config configs/pilot.yaml   (QC + universe + splits, no methods)
+#
+# Every value marked DECISION is a placeholder that the team leader (or you)
+# must confirm. docs/week2_decisions.md lists them with the evidence behind
+# each suggested default. Nothing in annotbench/ hard-codes these numbers.
+
+name: baron_muraro_pilot
+registry: configs/datasets.yaml
+label_map: labels/label_map.csv
+
+# Proposal VI.B asks for 10 fixed seeds. Two are enough to prove the seed is
+# wired in (Step 6). DECISION: extend to 10 once the pilot is approved.
+seeds: [0, 1]
+split_version: pilot_v1
+label_task: pancreas_harmonized_v1
+
+# ------------------------------------------------------------------ QC (per cell)
+# Fixed thresholds, applied per cell, before splits. A rule set to null is not
+# applied (the report says "not_applied"). A rule whose gene set the dataset
+# does not measure is reported "not_applicable" (proposal IV.D).
+qc:
+  gene_sets:
+    ribo: '^(RPL|RPS)\d+[A-Z]?\d*$|^RPLP[012]$|^RPSA$'
+    hb: '^HB[ABDEGMQZ]\d*$'          # not '^HB': that would catch HBEGF and HBP1
+  default:
+    min_total_counts: 200             # leader, 2026-11-19
+    max_total_counts: 100000          # leader, 2026-11-19. DECISION: removes 5 eligible Muraro cells (see notebook)
+    min_genes_detected: null          # DECISION
+    max_genes_detected: null          # DECISION
+    max_pct_mt: null                  # not applicable: neither dataset has mitochondrial features
+    max_pct_ribo: null                # DECISION: ribo % differs ~2x between inDrop and CEL-seq2, and by cell type
+    max_pct_hb: null                  # DECISION: Hb counts are ~0 in both datasets
+  per_dataset:                        # overrides of 'default', one block per dataset
+    baron: {}
+    muraro: {}
+
+# ------------------------------------------------------------------ gene universe
+universe:
+  name: pancreas_pilot_v1
+  status: provisional                 # pairwise Baron x Muraro, not yet the 4-study family universe
+  note: "Pairwise universe for the pilot. Proposal IV.D defines universes per tissue family."
+  datasets: [baron, muraro]
+  keep_resolutions: [official_symbol, unique_synonym]
+  shared_id_policy: drop              # DECISION: 'drop' (pilot) or 'sum' (not implemented)
+  drop_spike_ins: true
+
+# ------------------------------------------------------------------ split rules
+split_rules:
+  cap_per_class: 500                  # proposal VI.B
+  min_calibration_per_class: 20       # proposal VII.C
+  min_train_per_class: 20             # DECISION (io_spec §7 item 4)
+  min_eval_per_class: 10              # DECISION (io_spec §7 item 4)
+  donor_dominance: 0.9                # flag when one donor gives >= 90% of a class's training cells
+  challenge_reasons: [uncertain_label, suspected_doublet]
+  support_policy: flag                # DECISION: 'flag' (keep + report) or 'restrict' (drop weak classes)
+
+# ------------------------------------------------------------------ preprocessing
+preprocess:
+  recipe: lognorm_v1
+  target_sum: 10000                   # DECISION: leader prefers per-dataset -> 'dataset_median'. See notebook §6.
+  library_size: universe              # DECISION: 'universe' or 'all_endogenous'
+  n_hvg: 2000                         # leader, 2026-11-19
+  hvg_flavor: seurat                  # DECISION: seurat | cell_ranger | seurat_v3 | variance. 'seurat' drops INS/SST/PPY; seurat_v3 best in inner CV (notebook §6.3, §7)
+  hvg_batch_key: null                 # DECISION: null or donor
+  zero_sd_rule: unit
+  clip_max: 10                        # DECISION
+  n_pcs: 50                           # leader, 2026-11-19
+  pca_solver: full
+
+inner_cv:
+  # true: anything tuned or calibrated inside train (k grid, SVM Platt scaling)
+  # refits HVG/scaler/PCA on the inner-training donors only. Stricter and slower.
+  refit_preprocessing: true
+
+# ------------------------------------------------------------------ methods
+methods:
+  pca_knn:
+    k: 15                             # DECISION: leader asked. Inner CV: macro-F1 best at k=5-10 (notebook §7)
+    weights: uniform                  # DECISION: 'distance' keeps macro-F1 and gives continuous scores
+    metric: euclidean
+    k_grid: null                      # e.g. [5, 10, 15, 20, 30, 50] to choose k by donor-grouped inner CV
+  linear_svm:                         # PLACEHOLDER model until the leader's SVM is plugged in
+    C: 1.0
+    class_weight: null
+    representation: scaled_hvg        # DECISION: scaled_hvg or pca
+    probability_calibration: platt_inner_folds
+    max_iter: 5000
+    dual: true                        # liblinear dual solver: ~20 s per fit here; primal took minutes
+
+# ------------------------------------------------------------------ scenarios
+# Donor choices are placeholders (io_spec §7 items 3-5; the leader is analysing Baron).
+# human1 is suggested as calibration donor: it gives >= 20 calibration cells to 7 of
+# the 8 shared classes (epsilon never reaches 20) and leaves human3's 843 acinar
+# cells in training. human3 also reaches 7/8 but would leave only 115 acinar cells
+# to train on. See notebook §4.
+scenarios:
+  - {exp: e1, reference: baron, query: baron, eval_donors: [human4], calibration_donors: [human1]}
+  - {exp: e2, reference: baron, query: muraro, calibration_donors: [human1]}
+  - {exp: e3, reference: baron, query: muraro, calibration_donors: [human1], remove: [delta]}

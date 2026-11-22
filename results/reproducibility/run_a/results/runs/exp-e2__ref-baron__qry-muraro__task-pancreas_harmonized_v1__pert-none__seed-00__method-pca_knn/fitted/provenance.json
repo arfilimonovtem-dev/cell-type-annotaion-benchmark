@@ -1,0 +1,28 @@
+{
+  "recipe": "lognorm_v1",
+  "roles_used": [
+    "train"
+  ],
+  "reference_dataset": "baron",
+  "n_cells": 3084,
+  "cell_ids_sha256": "f6180fa11d8f2b4c5206952f4d06b4fb85712c45c8c39a2fe06f1ba310e20b9a",
+  "universe_sha256": "2bdc3c8918ffb7b776a521945b51fac5feb5fb69376a107a57a0e2dc21f5f2fc",
+  "target_sums": {
+    "baron": 10000.0,
+    "muraro": 10000.0
+  },
+  "query_adaptive_constants": false,
+  "git_commit": "f70a84e",
+  "git_dirty": true,
+  "package_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.16.0",
+    "pandas": "3.0.6",
+    "anndata": "0.13.4",
+    "scikit-learn": "1.7.1",
+    "scanpy": "1.12.4"
+  },
+  "created_utc": "2026-11-20T17:04:04Z",
+  "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-00",
+  "run_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-00__method-pca_knn"
+}
