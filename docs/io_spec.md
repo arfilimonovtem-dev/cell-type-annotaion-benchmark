@@ -1,6 +1,6 @@
 # Shared input and output specification
 
-**Status: draft for agreement with the team leader.** Open decisions are listed together in section 7. Roman-numeral references such as (IV-D) point to sections of the study proposal.
+**Status: agreed for the Week 2 pilot (pilot_v2, 2026-11-23).** Sections 3, 5 and 6 describe what the code writes now; section 7 records how the Week 1 open questions were settled (details in `docs/week2_decisions.md`). Roman-numeral references such as (IV-D) point to sections of the study proposal.
 
 Every method, in Python or R, reads and writes these same files. Plain formats (TSV, JSON, MatrixMarket) are used at boundaries so both languages can read them without a bridge.
 
@@ -11,7 +11,8 @@ Every method, in Python or R, reads and writes these same files. Plain formats (
 | Input | Description |
 | --- | --- |
 | Dataset object | From `annotbench.loading.load_dataset`. `X` holds the unit named in `uns["annotbench"]["assay_unit"]`. All deposited layers are kept. |
-| Split file | `splits/<version>/<split_id>.tsv.gz` (format in section 5). Written by the split step, which is anticipated but not built yet (section 8). |
+| Split file | `splits/<version>/<split_id>.tsv.gz`: reference-dataset cells only (format in section 5). |
+| Query set | `query_sets/<version>/<scenario_id>.tsv.gz`: query-dataset cells of a cross-dataset scenario, independent of the seed (section 5). |
 | Gene universe | `gene_universes/<family>_v<N>.tsv`, listing `ncbi_gene_id`. Built from feature metadata only, never from query expression (IV-D). |
 | QC rules | Versioned per assay (IV-D). |
 | Method requirement | The units a method accepts, declared by its adapter (Table 1). |
@@ -65,26 +66,31 @@ Each `fitted/` folder has one `provenance.json`:
 A scenario is indexed by reference, query, label task, perturbation, method and seed (VI-F). Fields are joined by double underscores.
 
 ```text
-split_id = exp-<e1..e6>__ref-<reference>__qry-<query>__task-<label_task>__pert-<perturbation>__seed-<NN>
-run_id   = <split_id>__method-<method>
+scenario_id = exp-<e1..e6>__ref-<reference>__qry-<query>__task-<label_task>__pert-<perturbation>
+split_id    = <scenario_id>__seed-<NN>
+run_id      = <split_id>__method-<method instance>
 ```
+
+A **method instance** is a method family with fixed settings, named in the config (`pca_knn.k5`, `pca_knn.k10`). A family with one instance uses the family name (`linear_svm`). The run record stores both `method` (instance) and `method_family`.
 
 Examples:
 
 ```text
-exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-03
-exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v1__pert-none__seed-00
-exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-00__method-linear_svm
-exp-e4__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-rare.delta.n20__seed-04__method-pca_knn
+exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-03
+exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00
+exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-linear_svm
+exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-07__method-pca_knn.k10
+exp-e4__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-rare.delta.n20__seed-04__method-pca_knn.k5   (planned)
 ```
 
-Field values use lowercase letters, digits, `_` and `.`, so a double underscore always separates fields. The method is absent from `split_id` because every method receives identical splits (VI-B). All four examples show the planned format only. No split files exist yet (section 8).
+Field values use lowercase letters, digits, `_` and `.`, so a double underscore always separates fields. The method is absent from `split_id` because every method receives identical splits (VI-B). Within-dataset query tokens name the held-out donor (`baron.human3`).
 
 ## 4. Model output vocabulary
 
 | Term | Allowed values |
 | --- | --- |
-| `method` | `singler`, `scmap`, `seurat_transfer`, `celltypist`, `linear_svm`, `pca_knn` |
+| `method` (family) | `singler`, `scmap`, `seurat_transfer`, `celltypist`, `linear_svm`, `pca_knn` |
+| method instance | `<family>` or `<family>.<tag>`, e.g. `pca_knn.k10` (section 3) |
 | `output_kind` | `native`, `common_threshold`, `wrapped` (V, VI-C) |
 | `predicted_label` | A `harmonized_label` from `labels/label_map.csv`, or empty when rejected |
 | `predicted_cl_id` | A Cell Ontology ID. For `wrapped`, this may be an ancestor term. Empty when rejected. |
@@ -95,7 +101,7 @@ A model's internal class names are converted by its adapter. No method-specific 
 
 ## 5. File formats
 
-**Split file** (planned: the split step in section 8 will write it), one row per cell in both datasets. Key: `dataset` + `cell_id`.
+**Split file**, one row per cell of the **reference dataset only**. Key: `dataset` + `cell_id`. The query dataset of a cross-dataset scenario never appears here, so no code path can train on it.
 
 | Column | Meaning |
 | --- | --- |
@@ -106,12 +112,16 @@ A model's internal class names are converted by its adapter. No method-specific 
 | `role_reason` | Why this cell has this role |
 | `inner_fold` | Donor used for donor-grouped tuning, on `train` and `train_reserve` cells |
 
-**Prediction file**, `results/runs/<run_id>/predictions.tsv.gz`, one row per query cell and `output_kind`:
+In within-dataset scenarios (E1, E3-within) the held-out donor's cells are `evaluation` or `evaluation_open_set` in the split file. Next to each split: `<split_id>.counts.tsv` (cells by role and class) and `<split_id>.restrictions.tsv` (support checks, section 8).
+
+**Query set**, `query_sets/<version>/<scenario_id>.tsv.gz`, one row per cell of the query dataset of a cross-dataset scenario. Same columns as the split file except `inner_fold`. Roles: `evaluation` (a class the reference trained on), `evaluation_open_set` (`class_removed:<x>` or `class_not_in_training`), `challenge_unlabeled`, `excluded`. It has no seed because the seed only touches reference cells; every seed of a scenario is scored against the same query set.
+**Prediction file**, `results/runs/<run_id>/predictions.tsv.gz`, one row per calibration or query cell and `output_kind`:
 
 | Column | Type | Notes |
 | --- | --- | --- |
 | `run_id` | text | |
-| `dataset`, `cell_id` | text | Must match the split file |
+| `dataset`, `cell_id` | text | Must match the split file or query set |
+| `cell_set` | text | `calibration` (reference cells used only for thresholds, VII.A) or `query` (scored cells) |
 | `output_kind` | text | Section 4 |
 | `predicted_label`, `predicted_cl_id` | text | Empty when rejected |
 | `prediction_level` | text | Section 4 |
@@ -119,9 +129,9 @@ A model's internal class names are converted by its adapter. No method-specific 
 | `top_score` | number | Empty if the method gives no score |
 | `score_type` | text | Section 4 |
 
-True labels are deliberately absent. Metric code joins them from the split file, so a method cannot read them from its own output folder.
+True labels are deliberately absent. Metric code (`annotbench/metrics.py`) joins them from the split file or the query set, so a method cannot read them from its own output folder. `cell_set` says only which cells were scored for what purpose; whether a query cell is seen or unseen is a label fact and stays in the split file or query set.
 
-**Per-class scores**, `results/runs/<run_id>/scores.tsv.gz`: `cell_id`, `score_type`, then one column per class in sorted vocabulary order. If a method has no defensible per-class score, the file is omitted and the run record says `missing_score_output` (V-A).
+**Per-class scores**, `results/runs/<run_id>/scores.tsv.gz`: `dataset`, `cell_id`, `cell_set`, `score_type`, then one column per class in sorted vocabulary order. If a method has no defensible per-class score, the file is omitted and the run record says `missing_score_output` (V-A).
 
 ## 6. Runtime and failure records
 
@@ -146,9 +156,22 @@ Every run writes `results/runs/<run_id>/run_record.json`, even when it fails. Fa
 }
 ```
 
-`status` is exactly one of `success`, `software_failure`, `ineligible_input`, `missing_score_output`, `timeout` (VII-D). The eligibility and failure matrix is the concatenation of all run records.
+`status` is exactly one of `success`, `software_failure`, `ineligible_input`, `missing_score_output`, `timeout` (VII-D). The eligibility and failure matrix is the concatenation of all run records (`results/run_index.tsv`).
 
-## 7. Decisions needed from the team leader
+The pilot's records also carry: `method_family`; `hashes` (config, split file, query set file, universe, HVG list, train/calibration/query cell IDs); `target_sums`; `query_adaptive_steps` (the per-dataset median library size is one); `method_settings`; `preprocess_settings`; `vocabulary`; `hvg_anomalies` and `hvg_query_coverage`; `threads_per_run`; `package_versions`; `git_commit`, `git_dirty`; `warnings`.
+
+## 7. Week 1 open questions and how they were settled
+
+Settled on 2026-11-23 (`docs/week2_decisions.md` has the reasons):
+
+1. Muraro unit: recovered UMIs, saturation at 256 recorded as a known limit (decision 22).
+2. Muraro `mesenchymal`: stellate, after a marker review (`labels/label_map_v2.csv`, decision 23).
+3. Validation role: no separate validation donor; donor-grouped inner folds inside the training donors.
+4. Split thresholds: 20 calibration (VII-C), 20 train, 10 evaluation, donor-dominance flag at 90%, `support_policy: flag` (decision 17).
+5. Class set: the reference trains on all its classes (`train_classes: all`, decision 18). Only Baron is a reference in the pilot.
+6. Cell Ontology release: still open. IDs stay marked unverified until a release is pinned.
+
+The original questions, as asked in Week 1:
 
 1. **Muraro expression unit.** The pilot proposes recovered UMIs (`umi`), which match Baron's unit. Their limit is saturation at 256 UMIs per gene and cell, reached by 1,408 of 12.4 million stored values. Corrected transcripts stay available in a layer.
 2. **Muraro `mesenchymal` (80 cells).** It is excluded until reviewed. Accepting it as stellate adds a ninth shared class candidate.
@@ -157,9 +180,9 @@ Every run writes `results/runs/<run_id>/run_record.json`, even when it fails. Fa
 5. **Whether each transfer direction may use its own class set.** Baron and Muraro share 8 eligible classes, but they don't support them equally. Muraro has 21 endothelial cells and no donor with 20, so endothelial can meet the 20-cell calibration minimum only when Baron is the reference. Epsilon has too few cells in both datasets (18 and 3).
 6. **Cell Ontology release.** The IDs in the label map are marked unverified until a release is pinned.
 
-## 8. The split step (anticipated, not built)
+## 8. The split step (built in Week 2: `annotbench/splits.py`)
 
-Week 1 stops before splits. The assignments depend on decisions 3 to 5 above, and they should be saved only once their rules are approved. This section records what the split step must satisfy, so whoever builds it starts from the proposal's requirements.
+These are the requirements the split step was built against. `validate_split` and `validate_query_set` re-check them on every file they write. One design change from the original plan: the query dataset of a cross-dataset scenario now lives in its own query set file, not in the split file.
 
 **Inputs that Week 1 already provides.** After `annotbench.labels.attach_labels`, every cell has `donor`, `label_original`, `label_harmonized`, `eligible_primary` and `exclusion_reason`. The integrity checks confirm that the donor column agrees with the cell IDs. The split step needs nothing else.
 

@@ -15,10 +15,10 @@ Everything here works on new arrays. Nothing edits the caller's matrix in place
 (scanpy's ``normalize_total(adata)`` does, which is how a loop over scenarios can
 silently feed already-normalized data to the second scenario).
 
-Decisions left to configuration (``preprocess:`` in configs/pilot.yaml):
-``target_sum`` (a fixed constant, or ``dataset_median`` as the leader prefers),
-which genes define the library size, the HVG method and batch key, the zero-sd
-rule, clipping, and the PCA solver.
+Settings come from ``preprocess:`` in configs/pilot.yaml. Decided 2026-11-23:
+``target_sum: dataset_median`` (each dataset scaled to the median library size
+of its own QC-passing cells), scanpy's ``seurat`` HVG flavor with an anomaly
+report (``hvg_diagnostics``), 2,000 HVGs, 50 PCs.
 """
 from __future__ import annotations
 
@@ -58,6 +58,9 @@ class PreprocessConfig:
     clip_max: float | None = 10.0      # upper clip after scaling, as scanpy's max_value
     n_pcs: int = 50
     pca_solver: str = "full"
+    # Genes whose fate in HVG selection is reported in every run (symbols; resolved
+    # to Gene IDs by the runner). They never change the selection, only the report.
+    hvg_watch_genes: tuple = ()
 
     @classmethod
     def from_config(cls, cfg: dict) -> "PreprocessConfig":
@@ -65,6 +68,8 @@ class PreprocessConfig:
         unknown = sorted(set(cfg) - known)
         if unknown:
             raise PreprocessError(f"preprocess: unknown keys {unknown}")
+        cfg = dict(cfg)
+        cfg["hvg_watch_genes"] = tuple(cfg.get("hvg_watch_genes") or ())
         config = cls(**cfg)
         if not (isinstance(config.target_sum, (int, float)) or config.target_sum == "dataset_median"):
             raise PreprocessError("target_sum must be a number or 'dataset_median'")
@@ -111,7 +116,14 @@ def lognorm(counts, target_sum: float, totals: np.ndarray | None = None) -> sp.c
 
 def select_hvg(lognormed: sp.csr_matrix, gene_ids: list[str], n_hvg: int, flavor: str,
                batches: np.ndarray | None = None, counts=None) -> pd.DataFrame:
-    """Rank genes by variability among the given (training) cells; return the top ``n_hvg``.
+    """Rank genes by variability among the given (training) cells; return the top ``n_hvg``."""
+    full = rank_genes(lognormed, gene_ids, n_hvg, flavor, batches, counts)
+    return full.head(min(n_hvg, len(gene_ids))).reset_index(drop=True)
+
+
+def rank_genes(lognormed: sp.csr_matrix, gene_ids: list[str], n_hvg: int, flavor: str,
+               batches: np.ndarray | None = None, counts=None) -> pd.DataFrame:
+    """Every gene ranked by variability (rank 1 = most variable).
 
     The ranking is done here, not left to the library, so ties are broken by
     Gene ID and the list never depends on chance or on row order.
@@ -154,10 +166,90 @@ def select_hvg(lognormed: sp.csr_matrix, gene_ids: list[str], n_hvg: int, flavor
     })
     ranking["score_sort"] = ranking["score"].fillna(-np.inf)
     ranking = ranking.sort_values(["nbatches", "score_sort", "id_number", "ncbi_gene_id"],
-                                  ascending=[False, False, True, True], kind="stable")
-    top = ranking.head(n_hvg).reset_index(drop=True)
-    top["rank"] = np.arange(1, len(top) + 1)
-    return top[["ncbi_gene_id", "rank", "score", "nbatches"]]
+                                  ascending=[False, False, True, True], kind="stable").reset_index(drop=True)
+    ranking["rank"] = np.arange(1, len(ranking) + 1)
+    return ranking[["ncbi_gene_id", "rank", "score", "nbatches"]]
+
+
+# Thresholds of the HVG anomaly report. They only decide what gets *reported*;
+# the selection itself never changes.
+HVG_MIN_DETECTING_CELLS = 10     # an HVG seen in fewer training cells is probably noise or a doublet signal
+HVG_DONOR_DOMINANCE = 0.9        # an HVG with >= 90% of its expression in one donor may be a donor effect
+HVG_QUERY_UNDETECTED_SHARE = 0.01  # report when > 1% of HVGs are never detected in the query cells
+
+
+def hvg_diagnostics(lognormed: sp.csr_matrix, counts, gene_ids: list[str], ranking: pd.DataFrame, n_hvg: int,
+                    watch: dict[str, str] | None = None, groups: np.ndarray | None = None) -> dict:
+    """Report what happened in HVG selection, so surprises are written down, not discovered later.
+
+    Decided 2026-11-23: keep scanpy's ``seurat`` flavor and *record* anomalies.
+    Everything is computed on the training cells the HVGs were chosen from.
+    """
+    counts = sp.csr_matrix(counts)
+    position = {g: i for i, g in enumerate(gene_ids)}
+    top = ranking.head(n_hvg)
+    columns = [position[g] for g in top["ncbi_gene_id"]]
+    detected_all = np.asarray((counts > 0).sum(axis=0)).ravel()
+    detected_hvg = detected_all[columns]
+    mean = np.asarray(lognormed.mean(axis=0)).ravel()
+    mean_rank = pd.Series(mean, index=gene_ids).rank(ascending=False, method="first").astype(int)
+    rank_of = dict(zip(ranking["ncbi_gene_id"], ranking["rank"]))
+    report: dict = {
+        "n_genes_ranked": int(len(ranking)), "n_hvg": int(len(top)),
+        "n_undefined_score": int(ranking["score"].isna().sum()),
+        "n_genes_all_zero_in_train": int((detected_all == 0).sum()),
+        "cutoff_tie": bool(len(ranking) > n_hvg and np.isfinite(ranking["score"].iloc[n_hvg - 1])
+                           and ranking["score"].iloc[n_hvg - 1] == ranking["score"].iloc[n_hvg]),
+        "low_detection_hvgs": sorted(top["ncbi_gene_id"][detected_hvg < HVG_MIN_DETECTING_CELLS].tolist()),
+        "donor_dominated_hvgs": [], "watch_genes": [],
+    }
+    anomalies = []
+    if report["n_undefined_score"]:
+        anomalies.append(f"{report['n_undefined_score']} genes had no variability score (constant or all-zero in train)")
+    if report["cutoff_tie"]:
+        anomalies.append(f"tie in the variability score at the cutoff (rank {n_hvg}); broken by Gene ID")
+    if report["low_detection_hvgs"]:
+        anomalies.append(f"{len(report['low_detection_hvgs'])} HVGs are detected in fewer than "
+                         f"{HVG_MIN_DETECTING_CELLS} training cells")
+    if groups is not None and len(set(np.asarray(groups, dtype=str))) > 1:
+        groups = np.asarray(groups, dtype=str)
+        sub = lognormed[:, columns]
+        sums = np.vstack([np.asarray(sub[groups == g].sum(axis=0)).ravel() for g in sorted(set(groups))])
+        share = sums.max(axis=0) / np.maximum(sums.sum(axis=0), 1e-12)
+        report["donor_dominated_hvgs"] = sorted(top["ncbi_gene_id"][share >= HVG_DONOR_DOMINANCE].tolist())
+        if report["donor_dominated_hvgs"]:
+            anomalies.append(f"{len(report['donor_dominated_hvgs'])} HVGs have >= {HVG_DONOR_DOMINANCE:.0%} of their "
+                             "training expression in one donor (donor effect, or a class that lives in one donor)")
+    missed = []
+    for gene_id, symbol in sorted((watch or {}).items(), key=lambda kv: kv[1]):
+        entry = {"symbol": symbol, "ncbi_gene_id": gene_id, "in_universe": gene_id in position}
+        if gene_id in position:
+            entry.update(rank=int(rank_of[gene_id]), selected=bool(rank_of[gene_id] <= n_hvg),
+                         mean_expression_rank=int(mean_rank[gene_id]),
+                         detected_in_train_cells=int(detected_all[position[gene_id]]))
+            if not entry["selected"]:
+                missed.append(f"{symbol} (rank {entry['rank']}, mean-expression rank {entry['mean_expression_rank']})")
+        report["watch_genes"].append(entry)
+    if missed:
+        anomalies.append("watched genes not among the HVGs: " + ", ".join(missed))
+    report["anomalies"] = anomalies
+    return report
+
+
+def hvg_query_coverage(counts, gene_ids: list[str], hvg_ids) -> dict:
+    """How well the query cells measure the frozen HVG list (record only; changes nothing)."""
+    position = {g: i for i, g in enumerate(gene_ids)}
+    sub = sp.csr_matrix(counts)[:, [position[g] for g in hvg_ids]]
+    n_cells = sub.shape[0]
+    detected = np.asarray((sub > 0).sum(axis=0)).ravel()
+    undetected = [g for g, d in zip(hvg_ids, detected) if d == 0]
+    share = len(undetected) / max(len(hvg_ids), 1)
+    coverage = {"n_query_cells": int(n_cells), "n_hvg": int(len(hvg_ids)), "n_hvg_undetected": len(undetected),
+                "median_fraction_of_cells_detecting_an_hvg": float(np.median(detected / max(n_cells, 1))),
+                "undetected_hvgs": sorted(undetected)}
+    coverage["anomaly"] = (f"{len(undetected)} of {len(hvg_ids)} HVGs ({share:.1%}) are never detected in the query cells"
+                           if share > HVG_QUERY_UNDETECTED_SHARE else None)
+    return coverage
 
 
 class Preprocessor:
@@ -170,7 +262,11 @@ class Preprocessor:
 
     # ----------------------------------------------------------------- fit
     def fit(self, counts, gene_ids: list[str], cell_ids, dataset: str, target_sums: dict[str, float],
-            totals: np.ndarray | None = None, batches: np.ndarray | None = None) -> "Preprocessor":
+            totals: np.ndarray | None = None, batches: np.ndarray | None = None,
+            watch_genes: dict[str, str] | None = None, groups: np.ndarray | None = None,
+            diagnose: bool = True) -> "Preprocessor":
+        """Fit on training cells. ``groups`` (donors) and ``watch_genes`` only feed the HVG report;
+        ``diagnose=False`` skips that report (used for inner-fold refits)."""
         from sklearn.decomposition import PCA
 
         cfg = self.config
@@ -186,8 +282,12 @@ class Preprocessor:
         lognormed = lognorm(counts, self._target_sum(dataset), self._totals(counts, totals))
         if cfg.hvg_batch_key and batches is None:
             raise PreprocessError(f"hvg_batch_key={cfg.hvg_batch_key!r} needs per-cell batches")
-        hvg = select_hvg(lognormed, self.gene_ids, cfg.n_hvg, cfg.hvg_flavor,
-                         batches if cfg.hvg_batch_key else None, counts)
+        ranking = rank_genes(lognormed, self.gene_ids, cfg.n_hvg, cfg.hvg_flavor,
+                             batches if cfg.hvg_batch_key else None, counts)
+        n_hvg = min(cfg.n_hvg, len(self.gene_ids))
+        hvg = ranking.head(n_hvg).reset_index(drop=True)
+        self.hvg_report = (hvg_diagnostics(lognormed, counts, self.gene_ids, ranking, n_hvg, watch_genes, groups)
+                           if diagnose else None)
         dense = self._columns(lognormed, hvg["ncbi_gene_id"])
         mean, sd = dense.mean(axis=0), dense.std(axis=0)  # ddof=0, as scikit-learn's StandardScaler
         zero = sd < 1e-12
@@ -273,6 +373,8 @@ class Preprocessor:
         write_tsv(pd.DataFrame({"pc": [f"PC{i + 1}" for i in range(len(self.pca_variance_ratio))],
                                 "explained_variance_ratio": self.pca_variance_ratio}), folder / "pca_variance.tsv")
         write_json({**self.provenance, **(extra_provenance or {})}, folder / "provenance.json")
+        if getattr(self, "hvg_report", None) is not None:
+            write_json(self.hvg_report, folder / "hvg_report.json")
         return folder
 
     @classmethod
@@ -282,7 +384,9 @@ class Preprocessor:
 
         folder = Path(folder)
         recipe = json.loads((folder / "recipe.json").read_text())
-        self = cls(PreprocessConfig(**recipe["config"]), recipe["seed"])
+        config = dict(recipe["config"])
+        config["hvg_watch_genes"] = tuple(config.get("hvg_watch_genes") or ())
+        self = cls(PreprocessConfig(**config), recipe["seed"])
         self.gene_ids = [str(g) for g in gene_ids]
         self.universe_sha256 = sha256_ordered(self.gene_ids)
         if self.universe_sha256 != recipe["universe_sha256"]:

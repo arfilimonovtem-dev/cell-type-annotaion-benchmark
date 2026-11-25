@@ -1,0 +1,15 @@
+dataset	rule	threshold	status	cells_failing	genes_in_set
+baron	min_total_counts	200.0	applied	0	
+baron	max_total_counts	100000.0	applied	0	
+baron	min_genes_detected		not_applied	0	
+baron	max_genes_detected		not_applied	0	
+baron	max_pct_mt		not_applied	0	0.0
+baron	max_pct_ribo		not_applied	0	91.0
+baron	max_pct_hb		not_applied	0	10.0
+muraro	min_total_counts	200.0	applied	268	
+muraro	max_total_counts	100000.0	applied	6	
+muraro	min_genes_detected		not_applied	0	
+muraro	max_genes_detected		not_applied	0	
+muraro	max_pct_mt		not_applied	0	0.0
+muraro	max_pct_ribo		not_applied	0	98.0
+muraro	max_pct_hb		not_applied	0	2.0

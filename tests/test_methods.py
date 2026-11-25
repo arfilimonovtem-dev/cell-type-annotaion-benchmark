@@ -86,6 +86,31 @@ class Svm(unittest.TestCase):
         self.assertTrue(set(svm.calibration_fit_ids) <= set(data.cell_ids))
         self.assertGreater(len(svm.calibration_fit_ids), 0)
 
+    def test_temperature_scaling_keeps_the_svm_argmax(self):
+        rep, labels, groups = clusters()
+        rng = np.random.default_rng(1)
+        query = rep + rng.normal(scale=8.0, size=rep.shape)  # noisy cells, so the decision is not trivial
+        raw = make_method("linear_svm", {"representation": "pca", "probability_calibration": "none"})
+        cal = make_method("linear_svm", {"representation": "pca"})
+        for svm in (raw, cal):
+            svm.fit(training(rep, labels, groups), seed=0)
+        self.assertGreater(cal.temperature, 0)
+        np.testing.assert_array_equal(raw.predict(query).scores.argmax(axis=1),
+                                      cal.predict(query).scores.argmax(axis=1))
+
+    def test_platt_alternative_still_gives_probabilities(self):
+        rep, labels, groups = clusters()
+        svm = make_method("linear_svm", {"representation": "pca", "probability_calibration": "platt_inner_folds"})
+        svm.fit(training(rep, labels, groups), seed=0)
+        self.assertIsNone(svm.temperature)
+        out = svm.predict(rep)
+        self.assertEqual(out.score_type, "calibrated_probability")
+        np.testing.assert_allclose(out.scores.sum(axis=1), 1.0)
+
+    def test_unknown_calibration_is_refused(self):
+        with self.assertRaises(ValueError):
+            make_method("linear_svm", {"probability_calibration": "isotonic"})
+
     def test_uncalibrated_svm_reports_decision_scores(self):
         rep, labels, groups = clusters()
         svm = make_method("linear_svm", {"representation": "pca", "probability_calibration": "none"})
@@ -95,6 +120,16 @@ class Svm(unittest.TestCase):
     def test_unit_check(self):
         with self.assertRaises(IneligibleInput):
             make_method("pca_knn", {}).check_units({"x": "log_normalized"})
+
+
+class Instances(unittest.TestCase):
+    def test_instance_name_maps_to_its_family(self):
+        from annotbench.methods import resolve_instance
+
+        self.assertEqual(resolve_instance("pca_knn.k10", {"method": "pca_knn", "k": 10}), ("pca_knn", {"k": 10}))
+        self.assertEqual(resolve_instance("linear_svm", {"C": 1.0}), ("linear_svm", {"C": 1.0}))
+        knn = make_method("pca_knn.k10", {"method": "pca_knn", "k": 10})
+        self.assertEqual((knn.name, knn.instance, knn.k), ("pca_knn", "pca_knn.k10", 10))
 
 
 class Folds(unittest.TestCase):

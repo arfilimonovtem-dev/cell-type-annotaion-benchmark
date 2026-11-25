@@ -1,40 +1,618 @@
 {
   "config": "/home/professor/cell-type-annotaion-benchmark/configs/pilot.yaml",
-  "config_sha256": "387e560e248f40b84f6db5b172ed265a659554c14035f84fe48158835bf2cdfb",
+  "config_sha256": "04a1689c34fd0e9fd17759806f3f727a23e1fc7f054b6cb6bfcbe137b9731276",
   "universe_sha256": "2bdc3c8918ffb7b776a521945b51fac5feb5fb69376a107a57a0e2dc21f5f2fc",
   "target_sums": {
-    "baron": 10000.0,
-    "muraro": 10000.0
+    "baron": 5016.0,
+    "muraro": 13229.5
   },
   "splits": [
     {
-      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-00",
-      "sha256": "f28a4ad51b5cdd0061a49241fe791e7b2db2c28268250603c02e28e8d94537fd"
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00",
+      "sha256": "1d95793ff20bb3865341288ca2f315bb48a1c0e5a9a4b5156701ad3bf6ce7259",
+      "query_set": null,
+      "query_set_sha256": null
     },
     {
-      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-01",
-      "sha256": "04f4d6a07bc1fd322cce9b441d71f541cecd9e92556c73e388fe8517d5012deb"
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01",
+      "sha256": "1b4253cd439feaeaced0689f5b60d2a93283165f634cd731f6e231272a098ef2",
+      "query_set": null,
+      "query_set_sha256": null
     },
     {
-      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-00",
-      "sha256": "7afd943c696ad1a0fc5d3fd615381c51e7ff32e3c3c548e23a7fa74545c7090e"
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-02",
+      "sha256": "89e0f9a5fd1f684103b424c3b06697bff9d3f31e5150e81a5732be78c7e78011",
+      "query_set": null,
+      "query_set_sha256": null
     },
     {
-      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-01",
-      "sha256": "9ac9cd3b3adf05d51070cce22f4a2dc17734d6ff2654c4aac301fd2563838b0e"
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-03",
+      "sha256": "63c7159fa8ef907a2e37922e3690865bdbf6e1a09a72019bb91b98b85d240f90",
+      "query_set": null,
+      "query_set_sha256": null
     },
     {
-      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-00",
-      "sha256": "b59bf69b35d64068ff18b633b64c64e2c987c18bd64621d4956ba58de61f5171"
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-04",
+      "sha256": "7083922f9537df2bec601eba857217c9546701bddde62cfb91a166591e59f332",
+      "query_set": null,
+      "query_set_sha256": null
     },
     {
-      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-01",
-      "sha256": "d8befb95217d0b0211c535a1e7659541c55d6d73defec35df6c9aa8abab3734c"
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-05",
+      "sha256": "3b1817d8883d5d2e6d1bb9d51b8ec99b647f77c681fb4555fc0d86de6821430b",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-06",
+      "sha256": "9ca06a2746297e357abf349b9ff7e436fa8a137f24e06b6de209b5c88946ce3f",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-07",
+      "sha256": "1f171488c800076ed981a459ac26ed64fa5f46d903ca56a3b69a380a82805d6a",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-08",
+      "sha256": "fd94cb6f7ad7acbc8646459d59acaf332d77d3bc39f52cdb5b0f21e95ce5925a",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-09",
+      "sha256": "741c9367e3043c02aee0e4f85d8d299060c0abce72540d31a92866b42fc98099",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00",
+      "sha256": "52509913be1bb64275f37211a929986d73ea7fc960131c09934edcaa08fda7f0",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01",
+      "sha256": "b91b9c6686a76c2e1f5c0c6e8b00ab69efd47accaaf0180c42ef0dd23dd0512b",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-02",
+      "sha256": "249d24fa1b4931c29552ffdff0ad03e8528469eb202ff17aecb3c285c15eb060",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-03",
+      "sha256": "a6db88953416da5d1775a8c5dcbad8848cd7868bb95cf8e4d5715ff34d04dd87",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-04",
+      "sha256": "9dcaa21288a1d540dd418aef48412fbd3a2a8dcc0812804ad32156290011653f",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-05",
+      "sha256": "40b030e1104a4de45e1bd6d1f6e6a9f8b64b0a64be2ab030ef9db2fa7c266f73",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-06",
+      "sha256": "6abe17663bef66ccc89f1e157f58da1cb0a937f345496f4f21921538114632fb",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-07",
+      "sha256": "d7e4c752189adf719962154803e9d53145c2e3be3ad6df2544658f13f9f370ba",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-08",
+      "sha256": "9072fd24a37842760c6b0a0461166c6de6b8e81b285923ccce182519231305fd",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-09",
+      "sha256": "e49ccde0de5b4c94dbb64f6ef395a5e39e4aa89118144de2295fa8bbf79b6395",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00",
+      "sha256": "ab333cf250558e76ea7457b7b5183a609f7b5d03b7b4f2636c5bce80b7ec9415",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01",
+      "sha256": "d1473e2a45b7566cf7b35aac8e9a30f4f79694f953f37939f045572d83a207cb",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-02",
+      "sha256": "7ac8ed80a685778015a9bcf8cd09b75b0aa367e7140c47d6bb3a900298c578bb",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-03",
+      "sha256": "974d4f70ba9137c57f0a9d20a7009cede60c7e3f04d66b4b43376d2db5dd9621",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-04",
+      "sha256": "c8f2118966442b055b8300d19ff860e67d588ce21bb412fedc5cd88c27ed6af7",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-05",
+      "sha256": "42fa832d1d29562174c549db77dc2246fa95386788139dddeb1e8d6a2e041ef1",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-06",
+      "sha256": "f81f8bb37a73c7558cf2b12dce22baa4cc7d73ea11fe9d99b727acb0f0d30262",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-07",
+      "sha256": "15405f756941dd67c4bafc03cc4238204760bd8538f8ba110b2894c08f916695",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-08",
+      "sha256": "155747e5a4aec83011035a581c0ec6017a8053f7b99ee2b5a5c884ce3866717b",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-09",
+      "sha256": "950cb20a5fcba39833048d7c40194ac95300c526d07fdea06d53ac975272ea40",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00",
+      "sha256": "780d3c91fa07b61d01e8d7409ebe7928b5834f860a0e3eaa476a89608d67032b",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01",
+      "sha256": "467939c3791392bf6801b86ff97fab698e0345edf99b2fc2904b7913f3025c94",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-02",
+      "sha256": "8344081aea647211449b83c702ba4ea59778ec8d9ba0cf015f2c9a36947a02ae",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-03",
+      "sha256": "dd057fdec8df547c071720518da4ac95643e8a5f90b34d04e5a3ee9ddfeb17ef",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-04",
+      "sha256": "1c862d1db4d8726b50f14dc109d213c3792bdf4e22caddcc7f0894935e39a30b",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-05",
+      "sha256": "845e1463594daf83eb732a88a56faeb8524c8c900c3fd404bc42fb7309547422",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-06",
+      "sha256": "eb8742c29aed130f78ef9b18cb9cf2d10aaa2cc8439265ee5d56bc3117c62386",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-07",
+      "sha256": "d46fe89733b6544f290feab40a7df837e716518f94cf05d48a136748420a86ea",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-08",
+      "sha256": "c14c1e6d4e1c3fa219225ab8c2f0d80cadbb2b83b004eb0d4c4634e2ff353a71",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-09",
+      "sha256": "58f42229a9a15e30b7be9013f95fde672e439eb7bcc3bb14e9bd676b6445ef01",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00",
+      "sha256": "cd092ccaff01dc07af32e515af8bdbdf9a29e79e905e68ee6bce94da41bb3ea3",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01",
+      "sha256": "64d19fb40d2ccb87159a625e59dd73fb92dd2ec77d9ef94dc05d76fdd6bc9fe3",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-02",
+      "sha256": "b82c9573009e7e20a60317005415a070aa832374ef11802963925b0d21ae8a65",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-03",
+      "sha256": "3f28ea225dcf8396eb16b8fc10e34f8871727dc23570b6cabd2c2512715e0775",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-04",
+      "sha256": "d2d9d6fce5141279d989233e549ec981ada11dd80ab82eb7317dff0caf336a81",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-05",
+      "sha256": "c044adf70b899ac0f8027adf9aec5b7a27f8fb031b78b17fdd1180a1d2296d8c",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-06",
+      "sha256": "08a271e2522b731f6761fc0e6e4a86bed4beeae034ede9c15f7cea8facd122cf",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-07",
+      "sha256": "71fd2d83f883b6eeab4259d2a6f02c4445b5e3297fbb942a38f4fae54c57c790",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-08",
+      "sha256": "acc52d1c49b884f7938b19d16999d842a9bede0e37ea270dfa583ef073df22ce",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-09",
+      "sha256": "d42cb171f379ef3a24d0e3dfdef1238383c0598ac7246311516372a7d4a3b5b7",
+      "query_set": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none.tsv.gz",
+      "query_set_sha256": "1adf623b2db0803d2babac6605a8c52804f0289ec18c974e7ade7e5f5f38abee"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00",
+      "sha256": "a781193da09f5c488e7156de05d98efa59244da614a495a702fd42cbc2717ebd",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01",
+      "sha256": "1ae36aecbf58d74eb22382051d0ba5195312319b0ca9c3f8cd2cd4d36905c377",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-02",
+      "sha256": "db8c82de8e051951786d07c8b71ff2cdfca9537f756c03cc7f79f863f3c838cb",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-03",
+      "sha256": "fc497f591f9cf469032c660fbb0c032e9765caa82dfb1eb9376e179858ea289c",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-04",
+      "sha256": "6273899765b5a8722fbbdcad17f9dee7a8c38ad59823acc8c6de5ca310154d0e",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-05",
+      "sha256": "f73e5d49f71b47cf29ad558839d042383305f611b9263d6a9e4d7000945667c8",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-06",
+      "sha256": "0b5ebaf7b32c5bba6508627d4a61f1c63de431de907779f47841f89d619d94b5",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-07",
+      "sha256": "53bb2b4b30a0a919b4ebe4dc0de5bdbfb202cd036cbc9e7a8a3e41f0759a27d7",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-08",
+      "sha256": "f4ffbe99c465cca2e7f8a7993ffe3012fca29e8089a534f806ea325de529d28b",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-09",
+      "sha256": "bf35d91990c76a397835d4ec1f49838bd5059556a814bd0b63b7c6170084f80d",
+      "query_set": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta.tsv.gz",
+      "query_set_sha256": "3b80dab82dbe28922a0f342bcd8eb92a8bcc1de3d7d8f5e9d6cdd65368748322"
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-00",
+      "sha256": "82255f383bbbdc57c9b702dc9d16bb582009c70906f5fe8577d427938f56edb0",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-01",
+      "sha256": "867691dc67dc17c8ff04257c483ab7469827c06e320757b7b275913609e61f0d",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-02",
+      "sha256": "adf1da78b53c7b57d0e0f77061637452b6b0b5d73c3e08cbd67cefc433df8eeb",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-03",
+      "sha256": "7d5e09bc70058f586a82781a11859037979378dbe5c39b0b714fb0e262e61a18",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-04",
+      "sha256": "1d434b638fe52f87c9ede87aa0eec13839d26373b959fefc6b6d6960ae57ad7c",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-05",
+      "sha256": "f2c63c97efaca96cf1f2f5d3df1cfbc9437df9cea9c5ed29dd9b0f418f56d2e9",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-06",
+      "sha256": "b3ae818303cbc654fe81990849bc2a25e9350efe883a374b34faf512ad155a9e",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-07",
+      "sha256": "3c7e5552b7d8d36c7cabce0d723c97ab48072f8d3977bb32f6f6f542df107308",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-08",
+      "sha256": "756e02232c5f9c63a51e32e2782aa117451b040f4dfeacb3c0ecadab5379fc6e",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-09",
+      "sha256": "a0dd0cd0455bded75bbd927c01ea6c19d348c101b76527fae34cfcc83697b7b4",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-00",
+      "sha256": "4dcfc5478e2be37c2636166a955f849edd18f54102e08984987378e3ebca507f",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-01",
+      "sha256": "3e3cf6a7470506ee76b3e8ca7461d9360b17aa182f39ab488d6ed03764a333c1",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-02",
+      "sha256": "6f236b10c4434dae245d9ad41484fb88c18d9c3370822eef0490ca1ace4d9d62",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-03",
+      "sha256": "a74a399ecfad9d3cbf99fb1e4e4b4f70485b83f46e27cd260eea9cd919746bae",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-04",
+      "sha256": "f1c02643d266ef52c1fe01745f1b29d8fe87ddf34dd7a04f453ef0abbe5acef3",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-05",
+      "sha256": "9121b9187c41a2daae5a1a52aab939dd5372650a909ed0ea6dda692a55879e9e",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-06",
+      "sha256": "1d11ca88c53b53be342c4c26e85be0546d25643f1a3c1d9a08b741a606a0d80f",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-07",
+      "sha256": "90e5e609f1b0b1aa05437d20a919a1a0ca8cea03d1ae642ab0225fbc3476ce37",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-08",
+      "sha256": "de7bd60f3524dc5469df0683353151e3fae567eb279ebeecd21264540625a974",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-09",
+      "sha256": "a07e0959673ff56621b8a304bead20a82876a7c18a8b4584b91f62f9ec432310",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-00",
+      "sha256": "5f3361b790d653665336a2ef7358491277c5c0338936f3c8c12a4cd4a968a4c1",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-01",
+      "sha256": "1450b463de8e85d2b321c4f983a9a0d18287b242d88426ef346003511dc2e1a6",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-02",
+      "sha256": "fa77378d497a0ab023e706f47e68bcbee992c7fa102ea73a3b5152c506f2c53e",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-03",
+      "sha256": "3441a47bd7e74d2be11545a12e72201b9fe94da138bb40e636ebc1e95305f026",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-04",
+      "sha256": "afe4b5088bc15b5b88489a288b0b16872d273434579925c5bde643bb3d5a3a42",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-05",
+      "sha256": "614eb9d5a6604d5ee1817d9707be262f6aa2113601fc1959ab396657717ead19",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-06",
+      "sha256": "8e83dc05231bc7e70fd927657ebcb4922ac8199ced2e40dd6a42993da356eace",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-07",
+      "sha256": "cb1d4571ce7823c66f12f361d4ba619d6f451eb991a5c0191e09425cddf6341e",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-08",
+      "sha256": "595b79588b6ab4a342cbb5f12f902e48512e3f48f2fe2f1c2f8e79033baf8a11",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-09",
+      "sha256": "739a7cf1fa3918c701613d016d2c587c72bef8607be46b7af251f475b21a083b",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-00",
+      "sha256": "e5508211153d3e3d2e84b4c94f4de5716cf6f564dcf760f9895708202b56f1ab",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-01",
+      "sha256": "c34f4433a84e956164421634e9d4a86803f5ca496b389e39a679660f53562788",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-02",
+      "sha256": "60ebda1f60588cfd980a0c9596e3e216585e8b2f2a45848cec2b23e0d66e5b78",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-03",
+      "sha256": "eafc02819c5af016eefdacb7fc24299d9b099e62c1a636813fe323d47b1c560d",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-04",
+      "sha256": "00cccbbeec46ff220b7f713e4f59c9aca858857bb6528ac37e0beb54774ba2fc",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-05",
+      "sha256": "54d86a69e8b642c6aa4c9fa83d12d4b356428bba2fcf85ac748d218bf7a77166",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-06",
+      "sha256": "436a904eec75887aa72b46dae8985205aed24a9ba5389c19112ddb4aeb085cda",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-07",
+      "sha256": "f5a60df720f16ff4cd167092d6689c4a8b162651675f255aa14344a81dd5ce95",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-08",
+      "sha256": "72bdedef1e5129719226a56c4cc4515bcb117004351cc616daa9e9d5e2eab3c9",
+      "query_set": null,
+      "query_set_sha256": null
+    },
+    {
+      "split_id": "exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-09",
+      "sha256": "138e932381baa4ac820d1f8d08f6a6d92632df4f67ba019c0f20e094e13a9177",
+      "query_set": null,
+      "query_set_sha256": null
     }
   ],
-  "git_commit": "f70a84e",
+  "jobs": 5,
+  "threads_per_run": 1,
+  "git_commit": "745b572",
   "git_dirty": true,
-  "started_utc": "2026-11-20T17:17:56Z",
-  "finished_utc": "2026-11-20T17:24:49Z",
+  "started_utc": "2026-11-23T08:20:25Z",
+  "finished_utc": "2026-11-23T09:02:04Z",
   "prepare_only": false
 }

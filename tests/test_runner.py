@@ -27,13 +27,14 @@ def toy_config(folder: Path, **overrides) -> Path:
         "qc": {"default": {"min_total_counts": 10}},
         "universe": {"name": "toy_universe", "datasets": ["toyref", "toyqry"]},
         "split_rules": {"cap_per_class": 20, "min_calibration_per_class": 5},
-        "preprocess": {"n_hvg": 30, "n_pcs": 5},
-        "methods": {"pca_knn": {"k": 5}, "linear_svm": {"representation": "pca"}},
+        "methods": {"pca_knn.k5": {"method": "pca_knn", "k": 5, "weights": "distance"},
+                    "linear_svm": {"representation": "pca"}},
         "scenarios": [
             {"exp": "e1", "reference": "toyref", "query": "toyref", "eval_donors": ["r4"], "calibration_donors": ["r1"]},
             {"exp": "e2", "reference": "toyref", "query": "toyqry", "calibration_donors": ["r1"]},
             {"exp": "e3", "reference": "toyref", "query": "toyqry", "calibration_donors": ["r1"], "remove": ["delta"]},
         ],
+        "preprocess": {"n_hvg": 30, "n_pcs": 5, "hvg_watch_genes": ["G0", "G59"]},
     }
     cfg.update(overrides)
     path = folder / "pilot.yaml"
@@ -94,9 +95,12 @@ class Runner(unittest.TestCase):
             self.assertNotIn("delta", scores.columns)
         split_id = index["split_id"].iloc[0]
         split = read_tsv(self.root / "out" / "splits" / "toy_v1" / f"{split_id}.tsv.gz")
+        self.assertEqual(set(split["dataset"]), {"toyref"})
         delta = split[split["label_harmonized"] == "delta"]
         self.assertFalse(delta["role"].isin(["train", "train_reserve", "calibration"]).any())
-        self.assertEqual(set(delta.loc[delta["dataset"] == "toyqry", "role"]), {"evaluation_open_set"})
+        scenario_id = split_id.rsplit("__seed-", 1)[0]
+        query = read_tsv(self.root / "out" / "query_sets" / "toy_v1" / f"{scenario_id}.tsv.gz")
+        self.assertEqual(set(query.loc[query["label_harmonized"] == "delta", "role"]), {"evaluation_open_set"})
 
     def test_both_methods_receive_identical_inputs(self):
         _, index = run_toy(self.root / "out", self.root)
@@ -124,11 +128,44 @@ class Runner(unittest.TestCase):
 
     def test_second_seed_changes_training_cells_only(self):
         _, index = run_toy(self.root / "out", self.root, exp_filter=["e2"], method_filter=["pca_knn"])
+        self.assertEqual(set(index["method"]), {"pca_knn.k5"})  # a family name selects its instances
         first, second = (record(self.root / "out", r)["hashes"] for r in sorted(index["run_id"]))
         self.assertNotEqual(first["train_ids_sha256"], second["train_ids_sha256"])
         self.assertEqual(first["calibration_ids_sha256"], second["calibration_ids_sha256"])
         self.assertEqual(first["query_ids_sha256"], second["query_ids_sha256"])
         self.assertEqual(first["universe_sha256"], second["universe_sha256"])
+
+    def test_parallel_jobs_give_identical_bytes(self):
+        _, index = run_toy(self.root / "serial", self.root, exp_filter=["e2", "e3"])
+        run_toy(self.root / "parallel", self.root, exp_filter=["e2", "e3"], jobs=3)
+        for run_id in index["run_id"]:
+            for name in ("predictions.tsv.gz", "scores.tsv.gz", "fitted/pca_loadings.tsv.gz"):
+                a = (self.root / "serial" / "results" / "runs" / run_id / name).read_bytes()
+                b = (self.root / "parallel" / "results" / "runs" / run_id / name).read_bytes()
+                self.assertEqual(a, b, f"{run_id}/{name}")
+
+    def test_hvg_report_is_written_and_watched_genes_reported(self):
+        _, index = run_toy(self.root / "out", self.root, exp_filter=["e2"], method_filter=["pca_knn"])
+        run_dir = self.root / "out" / "results" / "runs" / index["run_id"].iloc[0]
+        report = json.loads((run_dir / "fitted" / "hvg_report.json").read_text())
+        self.assertEqual({g["symbol"] for g in report["watch_genes"]}, {"G0", "G59"})
+        rec = record(self.root / "out", index["run_id"].iloc[0])
+        self.assertIn("hvg_anomalies", rec)
+        self.assertIsNotNone(rec["hvg_query_coverage"])
+        self.assertTrue((self.root / "out" / "results" / "hvg_anomalies.tsv").exists())
+
+    def test_evaluate_scores_every_run(self):
+        from annotbench.metrics import evaluate_pilot
+
+        _, index = run_toy(self.root / "out", self.root)
+        tables = evaluate_pilot(self.root / "out", "toy_v1")
+        summary = tables["run_summary"]
+        self.assertEqual(len(summary), len(index))
+        self.assertTrue((summary["accuracy"] > 0.9).all())  # toy classes are cleanly separated
+        e3 = summary[summary["exp"] == "e3"]
+        self.assertTrue((e3["n_unseen"] > 0).all())
+        self.assertTrue(e3["balanced_rejection_accuracy"].notna().all())
+        self.assertTrue((summary["calibration_frr"] <= 0.05).all())
 
 
 if __name__ == "__main__":

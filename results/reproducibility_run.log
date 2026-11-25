@@ -1,0 +1,313 @@
+$ /home/professor/miniconda3/envs/dataenv/bin/python -m annotbench run --config configs/pilot.yaml --out-root /home/professor/cell-type-annotaion-benchmark/results/reproducibility/run_a --seed 0 --seed 1 --jobs 5
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              27.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              32.6s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success             111.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success              32.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success              23.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              99.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              11.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              13.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success             103.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success              11.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success               9.8s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              93.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              11.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              12.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success              71.1s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success              10.7s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success              12.2s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              81.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              11.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              10.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success             114.0s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success              16.0s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success              14.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success             115.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pc pca_knn.k5   success              22.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pc pca_knn.k10  success              20.0s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-li linear_svm   success             215.0s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pc pca_knn.k5   success              20.8s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pc pca_knn.k10  success              13.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-li linear_svm   success             205.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m pca_knn.k5   success              13.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m pca_knn.k10  success              12.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m linear_svm   success             153.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m pca_knn.k5   success              16.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m pca_knn.k10  success              15.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m linear_svm   success             163.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              14.7s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              17.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              89.6s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              14.6s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              13.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              85.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              14.0s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              14.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              79.7s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              10.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              12.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              78.8s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              10.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              10.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              51.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.8s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              10.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              53.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              13.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              11.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              54.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              11.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              12.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              51.0s
+
+60 runs, 60 succeeded, 0 recorded as failures.
+$ /home/professor/miniconda3/envs/dataenv/bin/python -m annotbench run --config configs/pilot.yaml --out-root /home/professor/cell-type-annotaion-benchmark/results/reproducibility/run_b --seed 0 --seed 1 --jobs 3
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              21.5s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              22.6s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success              85.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success               8.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success               9.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              67.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success               8.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success               7.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success              66.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success               7.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success               7.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              64.7s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success               6.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success               5.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success              44.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success               7.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success               6.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              50.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success               8.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success               9.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success              68.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success               8.7s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success               7.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              68.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pc pca_knn.k5   success               6.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pc pca_knn.k10  success               7.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-li linear_svm   success             121.8s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pc pca_knn.k5   success               6.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pc pca_knn.k10  success               6.8s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-li linear_svm   success             118.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m pca_knn.k5   success               9.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m pca_knn.k10  success               6.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m linear_svm   success              89.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m pca_knn.k5   success               6.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m pca_knn.k10  success               9.7s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m linear_svm   success              94.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               6.5s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               6.5s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              55.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               6.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               7.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              55.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               7.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              65.7s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.5s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              62.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.1s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               6.2s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              42.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               6.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               6.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              47.7s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              10.7s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              63.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               6.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              52.0s
+
+60 runs, 60 succeeded, 0 recorded as failures.
+[PASS] split files identical: 20/20 files with equal decompressed content
+[PASS] query sets identical: 2/2 files with equal content
+[PASS] gene universe pancreas_pilot_v1.tsv identical: sha256 adbea6f84cbdf163
+[PASS] gene universe pancreas_pilot_v1_excluded.tsv identical: sha256 32a40635ffa7a930
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-linear_svm: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k10: max numeric difference 0; byte-identical: True
+[PASS] same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__method-pca_knn.k5: max numeric difference 0; byte-identical: True
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: train/train_reserve draw changes: 1938 cells moved between ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: donor roles unchanged: 4 (donor, role) pairs
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: calibration cells unchanged: 1724 cells
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation cells unchanged: 1937 cells
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation_open_set cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: excluded cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, delta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: train/train_reserve draw changes: 1938 cells moved between ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: donor roles unchanged: 4 (donor, role) pairs
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: calibration cells unchanged: 1937 cells
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation cells unchanged: 1724 cells
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation_open_set cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: excluded cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, delta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: train/train_reserve draw changes: 682 cells moved between ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: donor roles unchanged: 4 (donor, role) pairs
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: calibration cells unchanged: 1724 cells
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation cells unchanged: 3605 cells
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation_open_set cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: excluded cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, delta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: train/train_reserve draw changes: 1932 cells moved between ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: donor roles unchanged: 4 (donor, role) pairs
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: calibration cells unchanged: 1937 cells
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation cells unchanged: 1303 cells
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation_open_set cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: excluded cells unchanged: 0 cells
+[PASS] exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, delta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: train/train_reserve draw changes: 2344 cells moved between ['train', 'train_reserve']
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: donor roles unchanged: 4 (donor, role) pairs
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: calibration cells unchanged: 1937 cells
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation cells unchanged: 0 cells
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: evaluation_open_set cells unchanged: 0 cells
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: excluded cells unchanged: 0 cells
+[PASS] exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, delta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: train/train_reserve draw changes: 1938 cells moved between ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: donor roles unchanged: 8 (donor, role) pairs
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: calibration cells unchanged: 1599 cells
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation cells unchanged: 1723 cells
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation_open_set cells unchanged: 214 cells
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: excluded cells unchanged: 387 cells
+[PASS] exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: train/train_reserve draw changes: 1938 cells moved between ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: donor roles unchanged: 8 (donor, role) pairs
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: calibration cells unchanged: 1723 cells
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation cells unchanged: 1599 cells
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation_open_set cells unchanged: 125 cells
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: excluded cells unchanged: 476 cells
+[PASS] exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: train/train_reserve draw changes: 682 cells moved between ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: donor roles unchanged: 8 (donor, role) pairs
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: calibration cells unchanged: 1599 cells
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation cells unchanged: 3444 cells
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation_open_set cells unchanged: 161 cells
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: excluded cells unchanged: 440 cells
+[PASS] exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: train/train_reserve draw changes: 1932 cells moved between ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: donor roles unchanged: 8 (donor, role) pairs
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: calibration cells unchanged: 1723 cells
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation cells unchanged: 1202 cells
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation_open_set cells unchanged: 101 cells
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: excluded cells unchanged: 500 cells
+[PASS] exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: train/train_reserve draw changes: 2344 cells moved between ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: only train vs train_reserve moved: roles touched: ['train', 'train_reserve']
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: donor roles unchanged: 8 (donor, role) pairs
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: calibration cells unchanged: 1723 cells
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation cells unchanged: 0 cells
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: evaluation_open_set cells unchanged: 0 cells
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: excluded cells unchanged: 601 cells
+[PASS] exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta seed 00 vs 01: vocabulary unchanged: acinar, alpha, beta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell
+
+PASS: 144/144 checks passed. Report: /home/professor/cell-type-annotaion-benchmark/results/reproducibility/reproducibility_report.md
+exit 0

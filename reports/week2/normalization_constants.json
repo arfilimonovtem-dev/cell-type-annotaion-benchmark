@@ -1,9 +1,9 @@
 {
-  "mode": 10000,
+  "mode": "dataset_median",
   "library_size": "universe",
   "target_sums": {
-    "baron": 10000.0,
-    "muraro": 10000.0
+    "baron": 5016.0,
+    "muraro": 13229.5
   },
   "pool": "cells passing QC, any role",
   "pool_sizes": {

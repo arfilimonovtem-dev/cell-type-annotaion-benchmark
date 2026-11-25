@@ -1,0 +1,47 @@
+role	donor	label_harmonized	n_cells
+challenge_unlabeled	D28		1
+challenge_unlabeled	D29		1
+challenge_unlabeled	D30		1
+challenge_unlabeled	D31		1
+evaluation	D28	acinar	53
+evaluation	D28	alpha	53
+evaluation	D28	beta	13
+evaluation	D28	delta	7
+evaluation	D28	ductal	39
+evaluation	D28	endothelial	4
+evaluation	D28	gamma	9
+evaluation	D28	stellate	1
+evaluation	D29	acinar	5
+evaluation	D29	alpha	248
+evaluation	D29	beta	154
+evaluation	D29	delta	74
+evaluation	D29	ductal	21
+evaluation	D29	endothelial	2
+evaluation	D29	epsilon	2
+evaluation	D29	gamma	61
+evaluation	D29	stellate	6
+evaluation	D30	acinar	54
+evaluation	D30	alpha	301
+evaluation	D30	beta	119
+evaluation	D30	delta	68
+evaluation	D30	ductal	79
+evaluation	D30	endothelial	6
+evaluation	D30	gamma	5
+evaluation	D30	stellate	51
+evaluation	D31	acinar	106
+evaluation	D31	alpha	209
+evaluation	D31	beta	159
+evaluation	D31	delta	44
+evaluation	D31	ductal	106
+evaluation	D31	endothelial	9
+evaluation	D31	epsilon	1
+evaluation	D31	gamma	26
+evaluation	D31	stellate	22
+excluded	D28		586
+excluded	D28	alpha	1
+excluded	D28	beta	1
+excluded	D29		194
+excluded	D30		81
+excluded	D30	acinar	1
+excluded	D30	beta	2
+excluded	D31		85

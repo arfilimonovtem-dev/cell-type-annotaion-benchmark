@@ -1,0 +1,67 @@
+{
+  "status": "provisional",
+  "datasets": [
+    "baron",
+    "muraro"
+  ],
+  "policy": {
+    "keep_resolutions": [
+      "official_symbol",
+      "unique_synonym"
+    ],
+    "shared_id_policy": "drop",
+    "drop_spike_ins": true
+  },
+  "note": "Pairwise universe for the pilot. Proposal IV.D defines universes per tissue family.",
+  "name": "pancreas_pilot_v1",
+  "n_genes": 16847,
+  "ids_sha256": "2bdc3c8918ffb7b776a521945b51fac5feb5fb69376a107a57a0e2dc21f5f2fc",
+  "file_sha256": "adbea6f84cbdf163528f228629623eed9255b4e674c6b88b58ba3ad41b2e8384",
+  "excluded_counts": [
+    {
+      "dataset": "baron",
+      "reason": "ambiguous_name",
+      "n": 51
+    },
+    {
+      "dataset": "baron",
+      "reason": "not_in_every_dataset",
+      "n": 3133
+    },
+    {
+      "dataset": "baron",
+      "reason": "shares_gene_id",
+      "n": 43
+    },
+    {
+      "dataset": "baron",
+      "reason": "unmatched",
+      "n": 51
+    },
+    {
+      "dataset": "muraro",
+      "reason": "ambiguous_name",
+      "n": 59
+    },
+    {
+      "dataset": "muraro",
+      "reason": "not_in_every_dataset",
+      "n": 1333
+    },
+    {
+      "dataset": "muraro",
+      "reason": "shares_gene_id",
+      "n": 98
+    },
+    {
+      "dataset": "muraro",
+      "reason": "spike_in",
+      "n": 81
+    },
+    {
+      "dataset": "muraro",
+      "reason": "unmatched",
+      "n": 722
+    }
+  ]
+}

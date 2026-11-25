@@ -1,0 +1,205 @@
+{
+  "created_utc": "2026-11-20T17:17:35Z",
+  "config": "configs/pilot.yaml",
+  "tolerance": 1e-10,
+  "omp_num_threads": null,
+  "checks": [
+    {
+      "check": "split files identical",
+      "result": "PASS",
+      "detail": "6/6 files with equal decompressed content"
+    },
+    {
+      "check": "gene universe pancreas_pilot_v1.tsv identical",
+      "result": "PASS",
+      "detail": "sha256 adbea6f84cbdf163"
+    },
+    {
+      "check": "gene universe pancreas_pilot_v1_excluded.tsv identical",
+      "result": "PASS",
+      "detail": "sha256 32a40635ffa7a930"
+    },
+    {
+      "check": "same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-00__method-linear_svm",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-00__method-pca_knn",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-01__method-linear_svm",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none__seed-01__method-pca_knn",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-00__method-linear_svm",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-00__method-pca_knn",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-01__method-linear_svm",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none__seed-01__method-pca_knn",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-00__method-linear_svm",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-00__method-pca_knn",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-01__method-linear_svm",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "same seed reproduces exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta__seed-01__method-pca_knn",
+      "result": "PASS",
+      "detail": "max numeric difference 0; byte-identical: True"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: train/train_reserve draw changes",
+      "result": "PASS",
+      "detail": "1932 cells moved between ['train', 'train_reserve']"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: only train vs train_reserve moved",
+      "result": "PASS",
+      "detail": "roles touched: ['train', 'train_reserve']"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: donor roles unchanged",
+      "result": "PASS",
+      "detail": "4 (donor, role) pairs"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: calibration cells unchanged",
+      "result": "PASS",
+      "detail": "1937 cells"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: evaluation cells unchanged",
+      "result": "PASS",
+      "detail": "1303 cells"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: evaluation_open_set cells unchanged",
+      "result": "PASS",
+      "detail": "0 cells"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: excluded cells unchanged",
+      "result": "PASS",
+      "detail": "0 cells"
+    },
+    {
+      "check": "exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: vocabulary unchanged",
+      "result": "PASS",
+      "detail": "acinar, alpha, beta, delta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: train/train_reserve draw changes",
+      "result": "PASS",
+      "detail": "2344 cells moved between ['train', 'train_reserve']"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: only train vs train_reserve moved",
+      "result": "PASS",
+      "detail": "roles touched: ['train', 'train_reserve']"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: donor roles unchanged",
+      "result": "PASS",
+      "detail": "16 (donor, role) pairs"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: calibration cells unchanged",
+      "result": "PASS",
+      "detail": "1937 cells"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: evaluation cells unchanged",
+      "result": "PASS",
+      "detail": "2037 cells"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: evaluation_open_set cells unchanged",
+      "result": "PASS",
+      "detail": "0 cells"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: excluded cells unchanged",
+      "result": "PASS",
+      "detail": "1031 cells"
+    },
+    {
+      "check": "exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-none seed 00 vs 01: vocabulary unchanged",
+      "result": "PASS",
+      "detail": "acinar, alpha, beta, delta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: train/train_reserve draw changes",
+      "result": "PASS",
+      "detail": "2344 cells moved between ['train', 'train_reserve']"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: only train vs train_reserve moved",
+      "result": "PASS",
+      "detail": "roles touched: ['train', 'train_reserve']"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: donor roles unchanged",
+      "result": "PASS",
+      "detail": "24 (donor, role) pairs"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: calibration cells unchanged",
+      "result": "PASS",
+      "detail": "1723 cells"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: evaluation cells unchanged",
+      "result": "PASS",
+      "detail": "1844 cells"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: evaluation_open_set cells unchanged",
+      "result": "PASS",
+      "detail": "193 cells"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: excluded cells unchanged",
+      "result": "PASS",
+      "detail": "1632 cells"
+    },
+    {
+      "check": "exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v1__pert-remove.delta seed 00 vs 01: vocabulary unchanged",
+      "result": "PASS",
+      "detail": "acinar, alpha, beta, ductal, endothelial, epsilon, gamma, macrophage, mast, schwann, stellate, t_cell"
+    }
+  ],
+  "n_checks": 39,
+  "n_failed": 0
+}

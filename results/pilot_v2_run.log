@@ -1,0 +1,403 @@
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-02: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-03: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-04: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-05: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-06: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-07: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-08: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-09: calibration=1724, evaluation=1937, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-02: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-03: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-04: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-05: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-06: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-07: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-08: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-09: calibration=1937, evaluation=1724, train=2711, train_reserve=2197
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-02: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-03: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-04: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-05: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-06: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-07: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-08: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-09: calibration=1724, evaluation=3605, train=2353, train_reserve=887
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-02: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-03: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-04: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-05: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-06: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-07: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-08: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e1__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-09: calibration=1937, evaluation=1303, train=2842, train_reserve=2487
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-02: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-03: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-04: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-05: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-06: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-07: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-08: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e2__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-09: calibration=1937, train=3084, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=2117, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-02: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-03: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-04: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-05: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-06: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-07: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-08: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-09: calibration=1723, excluded=601, train=2697, train_reserve=3548 | query set: challenge_unlabeled=4, evaluation=1924, evaluation_open_set=193, excluded=951
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-02: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-03: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-04: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-05: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-06: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-07: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-08: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed-09: calibration=1599, evaluation=1723, evaluation_open_set=214, excluded=387, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-02: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-03: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-04: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-05: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-06: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-07: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-08: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed-09: calibration=1723, evaluation=1599, evaluation_open_set=125, excluded=476, train=2449, train_reserve=2197
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-02: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-03: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-04: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-05: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-06: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-07: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-08: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed-09: calibration=1599, evaluation=3444, evaluation_open_set=161, excluded=440, train=2038, train_reserve=887
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-00: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-01: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-02: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-03: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-04: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-05: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-06: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-07: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-08: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+split exp-e3__ref-baron__qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed-09: calibration=1723, evaluation=1202, evaluation_open_set=101, excluded=500, train=2556, train_reserve=2487
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              33.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              30.0s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success             113.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success              26.7s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success              32.7s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              96.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k5   success              12.0s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k10  success              14.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-02__met linear_svm   success             101.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k5   success              10.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k10  success               8.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-03__met linear_svm   success              90.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k5   success              10.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k10  success              11.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-04__met linear_svm   success             101.0s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k5   success              10.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k10  success              10.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-05__met linear_svm   success              99.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k5   success              10.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k10  success              10.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-06__met linear_svm   success              99.5s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k5   success              15.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k10  success              12.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-07__met linear_svm   success              97.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k5   success              11.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k10  success               9.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-08__met linear_svm   success              95.5s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k5   success              11.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k10  success              11.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-none__seed-09__met linear_svm   success              90.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              15.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              10.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success             104.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success              15.5s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success              13.5s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              94.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k5   success              10.8s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k10  success              10.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-02__met linear_svm   success              98.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k5   success               8.8s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k10  success              12.8s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-03__met linear_svm   success             103.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k5   success               9.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k10  success               9.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-04__met linear_svm   success             107.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k5   success              11.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k10  success               9.7s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-05__met linear_svm   success             101.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k5   success              11.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k10  success              15.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-06__met linear_svm   success             105.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k5   success               8.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k10  success              10.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-07__met linear_svm   success              98.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k5   success              11.5s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k10  success               9.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-08__met linear_svm   success              91.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k5   success              13.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k10  success              10.5s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-none__seed-09__met linear_svm   success              86.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success               9.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success               9.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success              66.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success              11.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success              14.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success              74.1s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k5   success               8.2s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k10  success              12.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-02__met linear_svm   success              74.7s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k5   success               9.8s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k10  success              12.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-03__met linear_svm   success              72.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k5   success              10.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k10  success               9.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-04__met linear_svm   success              67.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k5   success              11.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k10  success               9.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-05__met linear_svm   success              75.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k5   success               8.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k10  success              10.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-06__met linear_svm   success              69.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k5   success               9.7s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k10  success               9.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-07__met linear_svm   success              70.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k5   success               8.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k10  success              10.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-08__met linear_svm   success              78.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k5   success               9.2s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k10  success              10.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-none__seed-09__met linear_svm   success              81.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k5   success              10.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met pca_knn.k10  success              12.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-00__met linear_svm   success              99.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k5   success               9.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met pca_knn.k10  success               9.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-01__met linear_svm   success             102.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k5   success               9.0s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-02__met pca_knn.k10  success              12.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-02__met linear_svm   success             105.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k5   success               9.0s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-03__met pca_knn.k10  success              10.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-03__met linear_svm   success             101.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k5   success               8.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-04__met pca_knn.k10  success               8.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-04__met linear_svm   success             114.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k5   success              16.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-05__met pca_knn.k10  success              11.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-05__met linear_svm   success             106.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k5   success               8.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-06__met pca_knn.k10  success              12.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-06__met linear_svm   success              97.7s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k5   success               9.7s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-07__met pca_knn.k10  success              11.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-07__met linear_svm   success              96.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k5   success              10.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-08__met pca_knn.k10  success               8.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-08__met linear_svm   success              97.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k5   success              10.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-09__met pca_knn.k10  success              11.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-none__seed-09__met linear_svm   success             105.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pc pca_knn.k5   success              10.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-pc pca_knn.k10  success              11.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-00__method-li linear_svm   success             170.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pc pca_knn.k5   success              10.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-pc pca_knn.k10  success              11.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-01__method-li linear_svm   success             165.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-02__method-pc pca_knn.k5   success               9.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-02__method-pc pca_knn.k10  success               8.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-02__method-li linear_svm   success             167.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-03__method-pc pca_knn.k5   success              10.0s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-03__method-pc pca_knn.k10  success              11.0s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-03__method-li linear_svm   success             174.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-04__method-pc pca_knn.k5   success              11.7s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-04__method-pc pca_knn.k10  success              11.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-04__method-li linear_svm   success             181.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-05__method-pc pca_knn.k5   success               9.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-05__method-pc pca_knn.k10  success              18.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-05__method-li linear_svm   success             167.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-06__method-pc pca_knn.k5   success              16.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-06__method-pc pca_knn.k10  success              12.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-06__method-li linear_svm   success             179.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-07__method-pc pca_knn.k5   success               9.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-07__method-pc pca_knn.k10  success              10.8s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-07__method-li linear_svm   success             154.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-08__method-pc pca_knn.k5   success              10.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-08__method-pc pca_knn.k10  success               8.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-08__method-li linear_svm   success             173.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-09__method-pc pca_knn.k5   success               9.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-09__method-pc pca_knn.k10  success              10.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-none__seed-09__method-li linear_svm   success             159.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m pca_knn.k5   success               9.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m pca_knn.k10  success               8.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-00__m linear_svm   success             124.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m pca_knn.k5   success               9.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m pca_knn.k10  success               8.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-01__m linear_svm   success             128.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-02__m pca_knn.k5   success              14.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-02__m pca_knn.k10  success              11.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-02__m linear_svm   success             135.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-03__m pca_knn.k5   success               8.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-03__m pca_knn.k10  success               8.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-03__m linear_svm   success             116.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-04__m pca_knn.k5   success               9.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-04__m pca_knn.k10  success               9.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-04__m linear_svm   success             121.3s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-05__m pca_knn.k5   success               8.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-05__m pca_knn.k10  success               9.0s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-05__m linear_svm   success             126.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-06__m pca_knn.k5   success              12.4s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-06__m pca_knn.k10  success               8.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-06__m linear_svm   success             130.6s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-07__m pca_knn.k5   success               8.8s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-07__m pca_knn.k10  success              10.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-07__m linear_svm   success             131.9s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-08__m pca_knn.k5   success               9.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-08__m pca_knn.k10  success              12.7s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-08__m linear_svm   success             121.1s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-09__m pca_knn.k5   success               9.2s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-09__m pca_knn.k10  success               8.5s
+  qry-muraro__task-pancreas_harmonized_v2__pert-remove.delta__seed-09__m linear_svm   success             124.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.0s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              71.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.6s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              76.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              12.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              75.0s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.1s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              74.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.4s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              74.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              10.7s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              80.0s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.0s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              73.3s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.5s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.6s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              74.9s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.6s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              73.2s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.5s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.8s
+  qry-baron.human1__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              73.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              10.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              77.0s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              10.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               7.0s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              72.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              69.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.5s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              76.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.0s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              75.1s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               6.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.7s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              77.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              12.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              10.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              75.9s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.7s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.3s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              69.6s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.8s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              71.0s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.2s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              12.4s
+  qry-baron.human2__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              73.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               6.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              48.1s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.1s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              50.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              53.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              49.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               7.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              51.8s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              52.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               7.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              49.7s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.8s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.4s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              48.9s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.5s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.0s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              51.6s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.2s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.3s
+  qry-baron.human3__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              51.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              11.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              10.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              86.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              13.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              14.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              76.3s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              13.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              11.3s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              75.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              11.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success              10.8s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              76.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               9.3s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.3s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              80.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.3s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               9.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              78.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               8.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              76.0s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success              10.5s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               7.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              68.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.4s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.1s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              61.2s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k5   success               7.9s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed pca_knn.k10  success               8.6s
+  qry-baron.human4__task-pancreas_harmonized_v2__pert-remove.delta__seed linear_svm   success              49.9s
+
+300 runs, 300 succeeded, 0 recorded as failures.
+exit 0
