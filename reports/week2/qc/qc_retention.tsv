@@ -59,7 +59,7 @@ muraro	D28	delta	True	7	7	0	1.0
 muraro	D28	ductal	True	39	39	0	1.0
 muraro	D28	endothelial	True	4	4	0	1.0
 muraro	D28	gamma	True	9	9	0	1.0
-muraro	D28	stellate	False	1	1	0	1.0
+muraro	D28	stellate	True	1	1	0	1.0
 muraro	D29	<no label>	False	195	136	59	0.6974
 muraro	D29	acinar	True	5	5	0	1.0
 muraro	D29	alpha	True	248	248	0	1.0
@@ -69,7 +69,7 @@ muraro	D29	ductal	True	21	21	0	1.0
 muraro	D29	endothelial	True	2	2	0	1.0
 muraro	D29	epsilon	True	2	2	0	1.0
 muraro	D29	gamma	True	61	61	0	1.0
-muraro	D29	stellate	False	6	6	0	1.0
+muraro	D29	stellate	True	6	6	0	1.0
 muraro	D30	<no label>	False	82	73	9	0.8902
 muraro	D30	acinar	True	55	54	1	0.9818
 muraro	D30	alpha	True	301	301	0	1.0
@@ -78,7 +78,7 @@ muraro	D30	delta	True	68	68	0	1.0
 muraro	D30	ductal	True	79	79	0	1.0
 muraro	D30	endothelial	True	6	6	0	1.0
 muraro	D30	gamma	True	5	5	0	1.0
-muraro	D30	stellate	False	51	51	0	1.0
+muraro	D30	stellate	True	51	51	0	1.0
 muraro	D31	<no label>	False	86	69	17	0.8023
 muraro	D31	acinar	True	106	106	0	1.0
 muraro	D31	alpha	True	209	209	0	1.0
@@ -88,4 +88,4 @@ muraro	D31	ductal	True	106	106	0	1.0
 muraro	D31	endothelial	True	9	9	0	1.0
 muraro	D31	epsilon	True	1	1	0	1.0
 muraro	D31	gamma	True	26	26	0	1.0
-muraro	D31	stellate	False	22	22	0	1.0
+muraro	D31	stellate	True	22	22	0	1.0

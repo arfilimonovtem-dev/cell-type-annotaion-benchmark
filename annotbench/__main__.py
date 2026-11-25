@@ -92,11 +92,29 @@ def command_run(args) -> int:
 
     cfg = load_pilot_config(args.config)
     index = run_pilot(cfg, out_root=args.out_root, data_root=args.data_root, exp_filter=args.exp,
-                      method_filter=args.method, prepare_only=args.command == "prepare")
+                      method_filter=args.method, prepare_only=args.command == "prepare",
+                      seed_filter=args.seed, jobs=args.jobs)
     if args.command == "prepare":
         return 0
     failed = index[index["status"] != "success"]
     print(f"\n{len(index)} runs, {len(index) - len(failed)} succeeded, {len(failed)} recorded as failures.")
+    return 0
+
+
+def command_evaluate(args) -> int:
+    """Week 2: score every successful run against labels from the split / query set."""
+    from . import config as project_config
+    from .metrics import evaluate_pilot
+    from .runner import load_pilot_config
+
+    cfg = load_pilot_config(args.config)
+    out_root = Path(args.out_root) if args.out_root else project_config.REPO_ROOT
+    tables = evaluate_pilot(out_root, cfg.split_version)
+    summary = tables["scenario_summary"]
+    shown = summary[summary["metric"].isin(["accuracy", "macro_f1", "balanced_rejection_accuracy"])]
+    print(shown.pivot_table(index=["exp", "setting", "perturbation", "method"], columns="metric", values="mean")
+          .round(3).to_string())
+    print(f"\n{len(tables['run_summary'])} runs scored -> {out_root / 'results' / 'metrics'}")
     return 0
 
 
@@ -120,8 +138,14 @@ def build_parser() -> argparse.ArgumentParser:
         sub.add_argument("--config", default="configs/pilot.yaml", help="pilot configuration file")
         sub.add_argument("--out-root", default=None, help="where splits/, gene_universes/, results/ and reports/week2/ go (default: repo root)")
         sub.add_argument("--exp", action="append", choices=["e1", "e2", "e3"], help="only these experiments (repeatable)")
-        sub.add_argument("--method", action="append", help="only these methods (repeatable)")
+        sub.add_argument("--method", action="append", help="only these method instances or families (repeatable)")
+        sub.add_argument("--seed", action="append", type=int, help="only these seeds (repeatable)")
+        sub.add_argument("--jobs", type=int, default=1, help="runs in parallel (worker processes); outputs do not change")
         sub.set_defaults(run=command_run)
+    evaluate = commands.add_parser("evaluate", help="score the saved predictions (writes results/metrics/)")
+    evaluate.add_argument("--config", default="configs/pilot.yaml", help="pilot configuration file")
+    evaluate.add_argument("--out-root", default=None, help="the --out-root the pilot was run with (default: repo root)")
+    evaluate.set_defaults(run=command_evaluate)
     return parser
 
 

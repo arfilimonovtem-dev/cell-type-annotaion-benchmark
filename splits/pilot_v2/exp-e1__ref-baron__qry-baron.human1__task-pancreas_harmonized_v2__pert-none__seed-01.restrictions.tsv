@@ -1,0 +1,16 @@
+class	check	observed	threshold	consequence
+acinar	calibration_support	3.0	20.0	no class-conditional calibration; pooled calibration only (VII.C)
+epsilon	calibration_support	2.0	20.0	no class-conditional calibration; pooled calibration only (VII.C)
+epsilon	train_support	3.0	20.0	trained on few cells; interpret per-class results with care
+macrophage	calibration_support	17.0	20.0	no class-conditional calibration; pooled calibration only (VII.C)
+mast	calibration_support	9.0	20.0	no class-conditional calibration; pooled calibration only (VII.C)
+mast	train_support	8.0	20.0	trained on few cells; interpret per-class results with care
+schwann	calibration_support	6.0	20.0	no class-conditional calibration; pooled calibration only (VII.C)
+schwann	train_support	2.0	20.0	trained on few cells; interpret per-class results with care
+t_cell	calibration_support	2.0	20.0	no class-conditional calibration; pooled calibration only (VII.C)
+t_cell	train_support	3.0	20.0	trained on few cells; interpret per-class results with care
+mast	evaluation_support	8.0	10.0	too few evaluation cells to score this class reliably
+schwann	evaluation_support	5.0	10.0	too few evaluation cells to score this class reliably
+t_cell	evaluation_support	2.0	10.0	too few evaluation cells to score this class reliably
+acinar	donor_dominance	0.998	0.9	human3 supplies most training cells; donor and class are confounded
+endothelial	donor_dominance	0.929	0.9	human3 supplies most training cells; donor and class are confounded

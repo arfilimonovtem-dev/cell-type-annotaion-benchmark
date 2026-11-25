@@ -1,0 +1,17 @@
+{
+  "mode": 10000,
+  "library_size": "universe",
+  "target_sums": {
+    "baron": 10000.0,
+    "muraro": 10000.0
+  },
+  "pool": "cells passing QC, any role",
+  "pool_sizes": {
+    "baron": 8569,
+    "muraro": 2798
+  },
+  "pool_median_library_size": {
+    "baron": 5016.0,
+    "muraro": 13229.5
+  }
+}

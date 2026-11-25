@@ -7,7 +7,8 @@ import numpy as np
 import scipy.sparse as sp
 
 from annotbench.preprocess import (
-    PreprocessConfig, PreprocessError, Preprocessor, lognorm, resolve_target_sums, select_hvg,
+    PreprocessConfig, PreprocessError, Preprocessor, hvg_diagnostics, hvg_query_coverage, lognorm, rank_genes,
+    resolve_target_sums, select_hvg,
 )
 from annotbench.provenance import sha256_ids
 from tests.toydata import make_toy
@@ -131,6 +132,46 @@ class Hvg(unittest.TestCase):
         matrix = sp.csr_matrix(np.tile(np.array([[0.0, 1.0, 0.0, 1.0], [1.0, 0.0, 1.0, 0.0]]), (5, 1)))
         table = select_hvg(matrix, ["40", "3", "20", "100"], 2, "variance")
         self.assertEqual(list(table["ncbi_gene_id"]), ["3", "20"])
+
+
+class HvgReport(unittest.TestCase):
+    def setUp(self):
+        # 6 genes, 40 cells, 2 donors. g1 lives in donor b only; g5 is all zero; g4 is detected in 3 cells.
+        rng = np.random.default_rng(0)
+        x = rng.poisson(3.0, size=(40, 6)).astype(float)
+        x[:20, 1] = 0.0
+        x[:, 5] = 0.0
+        x[:, 4] = 0.0
+        x[:3, 4] = 50.0
+        self.counts = sp.csr_matrix(x)
+        self.genes = ["1", "2", "3", "4", "5", "6"]
+        self.groups = np.array(["a"] * 20 + ["b"] * 20)
+        self.lognormed = lognorm(self.counts, 1000.0)
+        self.ranking = rank_genes(self.lognormed, self.genes, 3, "variance")
+
+    def test_ranking_covers_every_gene_and_select_hvg_is_its_head(self):
+        self.assertEqual(list(self.ranking["rank"]), [1, 2, 3, 4, 5, 6])
+        self.assertEqual(list(select_hvg(self.lognormed, self.genes, 3, "variance")["ncbi_gene_id"]),
+                         list(self.ranking["ncbi_gene_id"].head(3)))
+
+    def test_anomalies_are_reported(self):
+        report = hvg_diagnostics(self.lognormed, self.counts, self.genes, self.ranking, 3,
+                                 watch={"3": "WATCHED", "999": "ABSENT"}, groups=self.groups)
+        self.assertEqual(report["n_genes_all_zero_in_train"], 1)
+        self.assertIn("5", report["low_detection_hvgs"])          # rank-1 gene seen in 3 cells only
+        self.assertIn("2", report["donor_dominated_hvgs"])        # expressed in donor b only
+        watched = {w["symbol"]: w for w in report["watch_genes"]}
+        self.assertFalse(watched["ABSENT"]["in_universe"])
+        self.assertIn("rank", watched["WATCHED"])
+        self.assertTrue(report["anomalies"])
+
+    def test_query_coverage_flags_undetected_hvgs(self):
+        hvg = list(self.ranking["ncbi_gene_id"].head(3))
+        query = sp.csr_matrix(np.zeros((5, 6)))
+        coverage = hvg_query_coverage(query, self.genes, hvg)
+        self.assertEqual(coverage["n_hvg_undetected"], 3)
+        self.assertIsNotNone(coverage["anomaly"])
+        self.assertIsNone(hvg_query_coverage(self.counts, self.genes, hvg[:1])["anomaly"])
 
 
 if __name__ == "__main__":

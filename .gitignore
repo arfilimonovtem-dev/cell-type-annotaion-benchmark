@@ -4,3 +4,11 @@ data/
 # Notebook checkpoints / Python caches
 .ipynb_checkpoints/
 __pycache__/
+
+# Per-run pilot outputs: derived and regenerable (docs/week2_decisions.md, decision 29).
+# Summary tables (results/run_index.tsv, results/metrics/, results/hvg_anomalies.tsv,
+# the reproducibility report) stay tracked. archive/ is tracked: its files are the
+# already-committed v1 outputs, so git stores no new data for them.
+/results/runs/
+/results/reproducibility/run_a/
+/results/reproducibility/run_b/

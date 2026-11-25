@@ -2,11 +2,14 @@
 
 "I ran it twice and it looked the same" is not evidence. This script:
 
-1. runs the documented entry point twice, in two fresh processes, into two folders:
-       python -m annotbench run --config <config> --out-root <out>/run_a
-       python -m annotbench run --config <config> --out-root <out>/run_b
+1. runs the documented entry point twice, in two fresh processes, into two folders,
+   with a different number of parallel workers each time (so it also shows that
+   --jobs never changes a result):
+       python -m annotbench run --config <config> --out-root <out>/run_a --jobs <jobs>
+       python -m annotbench run --config <config> --out-root <out>/run_b --jobs <jobs-b>
 2. compares the two runs file by file (Check 2):
-       split files, gene universe, HVG lists, predicted labels  -> exactly equal
+       split files, query sets, gene universe, HVG lists,
+       predicted labels                                          -> exactly equal
        scores, top scores, PCA loadings                          -> equal within --tolerance
        run records                                               -> equal except timings, timestamps, host
 3. compares seed 0 with every other seed inside run_a (Check 3):
@@ -17,6 +20,7 @@
 
 Usage (from the repo root):
     python scripts/check_reproducibility.py --config configs/pilot.yaml --out results/reproducibility
+    python scripts/check_reproducibility.py --seed 0 --seed 1 --jobs 6 --jobs-b 3   # what Week 2 ran
     python scripts/check_reproducibility.py --skip-runs --out results/reproducibility   # re-compare only
 """
 from __future__ import annotations
@@ -75,6 +79,10 @@ def compare_runs(a: Path, b: Path, report: Report, tolerance: float) -> None:
     same = [sha256_content(f) == sha256_content(b / f.relative_to(a)) for f in split_files]
     report.add("split files identical", bool(split_files) and all(same),
                f"{sum(same)}/{len(split_files)} files with equal decompressed content")
+    query_files = sorted((a / "query_sets").rglob("*.tsv.gz"))
+    if query_files:
+        same = [sha256_content(f) == sha256_content(b / f.relative_to(a)) for f in query_files]
+        report.add("query sets identical", all(same), f"{sum(same)}/{len(query_files)} files with equal content")
     for f in sorted((a / "gene_universes").glob("*.tsv")):
         report.add(f"gene universe {f.name} identical", sha256_content(f) == sha256_content(b / f.relative_to(a)),
                    f"sha256 {sha256_content(f)[:16]}")
@@ -167,22 +175,29 @@ def main(argv=None) -> int:
     parser.add_argument("--skip-runs", action="store_true", help="only compare existing run_a and run_b")
     parser.add_argument("--exp", action="append", help="pass through to `annotbench run --exp`")
     parser.add_argument("--method", action="append", help="pass through to `annotbench run --method`")
+    parser.add_argument("--seed", action="append", type=int, help="pass through to `annotbench run --seed`")
+    parser.add_argument("--jobs", type=int, default=1, help="parallel runs for run_a")
+    parser.add_argument("--jobs-b", type=int, default=None, help="parallel runs for run_b (default: same as --jobs)")
     args = parser.parse_args(argv)
     out = (REPO / args.out) if not Path(args.out).is_absolute() else Path(args.out)
-    extra = sum((["--exp", e] for e in args.exp or []), []) + sum((["--method", m] for m in args.method or []), [])
+    extra = (sum((["--exp", e] for e in args.exp or []), []) + sum((["--method", m] for m in args.method or []), [])
+             + sum((["--seed", str(s)] for s in args.seed or []), []))
+    jobs = {"run_a": args.jobs, "run_b": args.jobs_b or args.jobs}
     if not args.skip_runs:
         for name in ("run_a", "run_b"):
-            run_entry_point(args.config, out / name, extra)
+            run_entry_point(args.config, out / name, extra + ["--jobs", str(jobs[name])])
     report = Report()
     compare_runs(out / "run_a", out / "run_b", report, args.tolerance)
     compare_seeds(out / "run_a", report)
     summary = {"created_utc": utc_now(), "config": args.config, "tolerance": args.tolerance,
+               "seeds": args.seed, "jobs": jobs,
                "omp_num_threads": os.environ.get("OMP_NUM_THREADS"), "checks": report.rows,
                "n_checks": len(report.rows), "n_failed": report.failed}
     write_json(summary, out / "reproducibility_report.json")
     table = pd.DataFrame(report.rows)
     lines = [f"# Reproducibility report", "", f"Config `{args.config}`, tolerance {args.tolerance}, "
-             f"OMP_NUM_THREADS={os.environ.get('OMP_NUM_THREADS')}.", "",
+             f"OMP_NUM_THREADS={os.environ.get('OMP_NUM_THREADS')}, seeds {args.seed or 'all'}, "
+             f"jobs run_a={jobs['run_a']} / run_b={jobs['run_b']}.", "",
              f"**{len(report.rows) - report.failed} of {len(report.rows)} checks passed.**", "",
              "| check | result | detail |", "| --- | --- | --- |"]
     lines += [f"| {r.check} | {r.result} | {r.detail} |" for r in table.itertuples()]

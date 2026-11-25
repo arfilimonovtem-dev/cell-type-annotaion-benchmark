@@ -1,0 +1,8 @@
+{
+  "split_version": "pilot_v2",
+  "n_runs_scored": 300,
+  "n_runs_skipped": 0,
+  "target_frr": 0.05,
+  "ece_bins": 10,
+  "created_utc": "2026-11-23T09:02:48Z"
+}
